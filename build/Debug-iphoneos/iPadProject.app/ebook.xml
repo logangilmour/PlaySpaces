@@ -1,0 +1,372 @@
+<pagemanager name="pm" top='20' left='0' width='768' height='1004' background='000000ff' active="true">
+<page name="page" top="0" left="0" width="768" height="1024" background='ffffffff'>
+
+<scaleanimation from="0.460" ammount="1" duration="1" name="zoom_map">
+<horizontaltranslationanimation ammount="-261" duration="1" name="zoom_map">
+<verticaltranslationanimation ammount="-384" duration="1" name="zoom_map">
+	<listener name="finito" for="atEnd" target="grow" message="off" state="on"/>
+	<listener name="finito" for="atEnd" target="btn" message="on" state="on"/>
+	<listener name="finito" for="atBegin" target="shrink" message="off" state="on"/>
+	<listener name="finito" for="atBegin" target="grow" message="on" state="on"/>
+<page top="-600" left="-455" width="1680" height="2224" name="map">
+
+<image top="0" left="0" name = "map" src="background.png" background="ffffffff">
+	<listener name = "grow" for="singletap" target="zoom_map" message="end" state="on"/>
+	<listener name="start" for="singletap" target="btn1" message="end" state="on"/>
+	<listener name="start" for="singletap" message="end" target="subpages"/>
+</image>
+
+	<opacityanimation name="op2" from="0" ammount="1" duration="2">
+	<image name="img_2" left="1126" top="1603" src="img_2.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op3" from="0" ammount="1" duration="2">
+	<image name="img_3" left="1137" top="1650" src="img_3.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op1" from="0" ammount="1" duration="2">
+	<image name="img_1" left="876" top="1576" src="img_1.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op4" from="0" ammount="1" duration="2">
+	<image name="img_4" left="1140" top="1590" src="img_4.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op5" from="0" ammount="1" duration="2">
+	<image name="img_5" left="627" top="1422" src="img_5.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op6" from="0" ammount="1" duration="2">
+	<image name="img_6" top="1552" left="890" src="img_6.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op7" from="0" ammount="1" duration="2">
+	<image name="img_7" top="1680" left="732" src="img_7.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op8" from="0" ammount="1" duration="2">
+	<image name="img_8" left="781" top="1861" src="img_8.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="op9" from="0" ammount="1" duration="2">
+	<image name="img_9" left="1018" top="1644" src="img_9.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="btn1" from="0" ammount="1">
+	<image left="1156" top="1850" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="op1" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="btn2" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page1" state="off"/>
+		<listener name="btn" for="touchbegin" target="a1" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a1" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+	<audio name="a1" src="one"/>
+	<audio name="a2" src="two"/>
+	<audio name="a3" src="three"/>
+	<audio name="a4" src="four"/>
+	<audio name="a5" src="five"/>
+	<audio name="a6" src="six"/>
+	<audio name="a7" src="seven"/>
+	<audio name="a8" src="eight"/>
+	<audio name="a9" src="nine"/>
+	<opacityanimation name="btn2" from="0" ammount="1">
+	<image name="btn2" left="1212" top="1764" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="op2" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="btn3" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page2" state="off"/>
+		<listener name="btn" for="touchbegin" target="a2" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a2" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+	
+	<opacityanimation name="btn3" from="0" ammount="1">
+	<image left="1316" top="1700" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn4" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op3" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page3" state="off"/>
+		<listener name="btn" for="touchbegin" target="a3" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a3" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+
+	<opacityanimation name="btn4" from="0" ammount="1">
+	<image left="1220" top="1638" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn5" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op4" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page4" state="off"/>
+		<listener name="btn" for="touchbegin" target="a4" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a4" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+	
+	<opacityanimation name="btn5" from="0" ammount="1">
+	<image left="1259" top="1547" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn6" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op5" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page5" state="off"/>
+		<listener name="btn" for="touchbegin" target="a5" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a5" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+
+	
+	<opacityanimation name="btn6" from="0" ammount="1">
+	<image left="1003" top="1556" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn7" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op6" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page6" state="off"/>
+		<listener name="btn" for="touchbegin" target="a6" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a6" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+
+	<opacityanimation name="btn7" from="0" ammount="1">
+	<image left="912" top="1846" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn8" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op7" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page7" state="off"/>
+		<listener name="btn" for="touchbegin" target="a7" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a7" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+
+	<opacityanimation name="btn8" from="0" ammount="1">
+	<image left="780" top="1932" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="btn9" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="op8" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page8" state="off"/>
+		<listener name="btn" for="touchbegin" target="a8" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a8" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+	
+	<opacityanimation name="btn9" from="0" ammount="1">
+
+	<image left="1148" top="1722" src="dot_on.png" pressable="true">
+		<listener name="btn" for="touchbegin" target="op9" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="sub" message="page9" state="off"/>
+		<listener name="btn" for="touchbegin" target="multimedia" message="end" state="off"/>
+		<listener name="btn" for="touchbegin" target="a9" message="play" state="off"/>
+		<listener name="btn" for="touchend" target="a9" message="reset" state="off"/>
+	</image>
+	</opacityanimation>
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="pl1" left="764" top="1730"  width="69" height="67">
+	<image name="l1" src="link.png">
+	<listener name="btn" for="singletap" target="browser" message="end" state="off"/>
+	<listener name="btn" for="singletap" target="webport" message="http://halloween-party-fun.com/games/oldmotherwitch.htm" state="off"/>
+	</image>
+	</page>
+	</opacityanimation>
+
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="pl2" left="852" top="1705" width="69" height="67">
+	<image name="l2" src="link.png">
+	<listener name="btn" for="singletap" target="browser" message="end" state="off"/>
+	<listener name="btn" for="singletap" target="webport" message="http://www.playgroundfun.org.uk/GameRules.aspx?gameVersionID=45" state="off"/>
+	</image>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="pl3" left="766" top="1799" width="69" height="67">
+	<image name="l3" src="link.png">
+	<listener name="btn" for="singletap" target="browser" message="end" state="off"/>
+	<listener name="btn" for="singletap" target="webport" message="http://www.gameskidsplay.net/games/mental_games/mother_may_i.html" state="off"/>
+	</image>
+	</page>
+	</opacityanimation>
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="pl4" left="853" top="1773"  width="69" height="67">
+	<image name="l4" src="link.png">
+	<listener name="btn" for="singletap" target="browser" message="end" state="off"/>
+	<listener name="btn" for="singletap" target="webport" message="http://en.wikipedia.org/wiki/Simon_says" state="off"/>
+	</image>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="old_house_cam" left="983" top="1864" width="82" height="99">
+	<image name="old_house_view" src="old_house_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="old_house" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="old_house" message="begin" state="on"/>
+
+	</image>
+
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="tree_cam" left="991" top="1699" width="87" height="67">
+	<image name="tree_view" src="tree_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="tree" message="end" state="on"/>
+	<listener name="multi" for="touchbegin" target="cycle" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="tree" message="begin" state="on"/>
+
+	</image>
+
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="window_yard_cam" left="1081" top="1646" width="64" height="64">
+	<image name="window_yard_view" src="window_house_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="window_yard" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="window_yard" message="begin" state="on"/>
+
+	</image>
+
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="bedroom_yard_cam" left="1087" top="1705" width="54" height="64">
+	<image name="bedroom_yard_view" left="0" top="-15" src="bedroom_house_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="bedroom_yard" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="bedroom_yard" message="begin" state="on"/>
+
+	</image>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="1">
+	<page name="yard_house_cam" left="1247" top="1718" width="54" height="70">
+	<image name="yard_house_view" left="-30" top="0" src="yard_house_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="yard_house" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="yard_house" message="begin" state="on"/>
+
+	</image>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="hill_yard_cam" left="1263" top="1591" width="80" height="80">
+	<image name="hill_yard_view" src="hill_yard_view.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="hill_yard" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="hill_yard" message="begin" state="on"/>
+
+	</image>
+
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="multimedia" from="0" ammount="1" duration="2">
+	<page name="video_cam" left="1400" top="1553" width="47" height="44">
+	<image name="video_view" src="vidcam.png" pressable="true">
+	<listener name="multi" for="touchbegin" target="vid" message="play" state="on"/>
+	<listener name="multi" for="touchbegin" target="video" message="end" state="on"/>
+	<listener name="multi" for="touchend" target="video" message="begin" state="on"/>
+	<listener name="multi" for="touchend" target="vid" message="reset" state="on"/>
+
+	</image>
+
+	</page>
+	</opacityanimation>
+
+	
+	
+	
+
+<opacityanimation name="subpages" from="0" ammount="1" duration="2">
+	<page name="ppp" left="712" top="982" width="776" height="555" background="b3b3b3ff">
+
+	<pagemanager name = "sub" left="25" top="25" width="725" height="505" background="ffffffff">
+	
+	<page name="page1" width="725" height="505" background="ffffffff">
+	<image name="page1text" src="page1.png"/>
+	</page>
+	
+	<page name="page2" width="725" height="505" background="ffffffff">
+	<image name="page2text" src="page2.png"/>
+	</page>
+	
+	<page name="page3" width="725" height="505" background="ffffffff">
+	<image name="page3text" src="page3.png"/>
+	</page>
+	
+	<page name="page4" width="725" height="505" background="ffffffff">
+	<image name="page4text" src="page4.png"/>
+	</page>
+
+	<page name="page5" width="725" height="505" background="ffffffff">
+	<image name="page5text" src="page5.png"/>
+	</page>
+
+	<page name="page6" width="725" height="505" background="ffffffff">
+	<image name="page6text" src="page6.png"/>
+	</page>
+
+	<page name="page7" width="725" height="505" background="ffffffff">
+	<image name="page7text" src="page7.png"/>
+	</page>
+
+	<page name="page8" width="725" height="505" background="ffffffff">
+	<image name="page8text" src="page8.png"/>
+	</page>
+
+	<page name="page9" width="725" height="505" background="ffffffff">
+	<image name="page9text" src="page9.png"/>
+	</page>
+
+	
+	</pagemanager>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation from="0" ammount="1" name="zoom_map" duration="0.5">
+	<page name="images" left="741" top="1014" width="709" height="490">
+	<opacityanimation name="old_house" from="0" ammount="1" duration="0.5">
+	<image name="1old_house_img" src="old_house.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="tree" from="0" ammount="1" duration="0.5">
+	<listener name="multi" for="atBegin" target="cycle" message="reset" state="on"/>
+	<listener name="multi" for="atEnd" target="cycle" message="end" state="on"/>
+
+	<page>
+	<image name="1winter_tree_img" src="winter_tree.png"/>
+	<opacityanimation name="cycle" from="0" ammount="1" duration="5">
+	<image name="1summer_tree_img" src="summer_tree.png"/>
+	</opacityanimation>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="window_yard" from="0" ammount="1" duration="0.5">
+	<image name="1window_yard_img" src="window_yard.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="bedroom_yard" from="0" ammount="1" duration="0.5">
+	<image name="1bedroom_yard_img" src="bedroom_yard.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="yard_house" from="0" ammount="1" duration="0.5">
+	<image name="1yard_house_img" src="yard_house.png"/>
+	</opacityanimation>
+	
+	<opacityanimation name="hill_yard" from="0" ammount="1" duration="0.5">
+	<image name="1hill_yard_img" src="hill_yard.png"/>
+	</opacityanimation>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="video" from="0" ammount="1" duration="0.5">
+	<page name="vid_page" left="716" top="984" width="768" height="555">
+		<video name ="vid" width="768" height="555" src="video1"/>
+	</page>
+	</opacityanimation>
+	
+	<opacityanimation name="browser" from = "0" ammount="1" duration="0.5">
+	<page name="webview" left="716" top="984" width="768" height="1024">
+	<image name="close" src="close.png" left="0" top="924">
+	<listener name="btn" for="singletap" target="browser" message="begin" state="off"/>
+	</image>
+	<web name="webport" width="768" height="924" left="0" top="0"/>
+	</page>
+	</opacityanimation>
+</page>	
+</verticaltranslationanimation>
+</horizontaltranslationanimation>
+</scaleanimation>
+</page>
+</pagemanager>

@@ -1,0 +1,252 @@
+TiPadProject
+v7
+r0
+t302645268.133223
+cCheck dependencies
+cProcessInfoPlistFile /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/Info.plist iPadProject-Info.plist
+cCompileXIB /Users/logan/Documents/iPadProject/MainWindow.xib
+cCompileXIB /Users/logan/Documents/iPadProject/MainView.xib
+cProcessPCH /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch.gch iPadProject_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/main.o /Users/logan/Documents/iPadProject/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProjectAppDelegate.o /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/MainView.o /Users/logan/Documents/iPadProject/MainView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
+c000000004BF431D80000000000000110
+t1274294744
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BA03AB3000000000026F020
+t1268791987
+s2551840
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004B9F1DE40000000000289C20
+t1268719076
+s2661408
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004B9F1DD60000000000001355
+t1268719062
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004BA6CAEC000000000000098F
+t1269222124
+s2447
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004BA6CB31000000000214E400
+t1269222193
+s34923520
+
+N/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h
+c000000004C59C88C00000000000001B5
+t1280952460
+s437
+i<UIKit/UIKit.h>
+
+N/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m
+c000000004C59C82B0000000000000318
+t1280952363
+s792
+i"iPadProjectAppDelegate.h"
+
+N/Users/logan/Documents/iPadProject/MainView.h
+c000000004C59C46B00000000000000DA
+t1280951403
+s218
+i<UIKit/UIKit.h>
+
+N/Users/logan/Documents/iPadProject/MainView.m
+c000000004C59C88C000000000000058A
+t1280952460
+s1418
+i"MainView.h"
+
+N/Users/logan/Documents/iPadProject/MainView.xib
+c000000004C59C46B0000000000001853
+t1280951403
+s6227
+
+N/Users/logan/Documents/iPadProject/MainWindow.xib
+c000000004C17E4740000000000003E81
+t1276634228
+s16001
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app
+t2
+s0
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app.dSYM
+t2
+s0
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/Info.plist
+t1280952461
+s814
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/MainView.nib
+t1280952465
+s769
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/MainWindow.nib
+t1280952465
+s982
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/PkgInfo
+t1280952461
+s8
+
+N/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/iPadProject
+t2
+s0
+
+N/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/MainView.o
+t1280952468
+s33936
+
+N/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProject.LinkFileList
+c000000004C59C88D0000000000000190
+t1280952461
+s400
+
+N/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProjectAppDelegate.o
+t2
+s0
+
+N/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/main.o
+t1280952468
+s5936
+
+N/Users/logan/Documents/iPadProject/iPadProject_Prefix.pch
+c000000004C17E47400000000000000BF
+t1276634228
+s191
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/logan/Documents/iPadProject/main.m
+c000000004C17E474000000000000016F
+t1276634228
+s367
+i<UIKit/UIKit.h>
+
+N/var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch.gch
+t1280952467
+s13805456
+
+NiPadProject-Info.plist
+c000000004C17E47400000000000004D6
+t1276634228
+s1238
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies302645260#302645261#0(0"0(0#1#0"31244212048494624#0"0#
+
+CCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/MainView.o /Users/logan/Documents/iPadProject/MainView.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s302645268.027313
+e302645268.133114
+r1
+xCompileC
+xbuild/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/MainView.o
+x/Users/logan/Documents/iPadProject/MainView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@53"Compile /Users/logan/Documents/iPadProject/MainView.m302645268#302645268#0(0"0(0#0#45"/Users/logan/Documents/iPadProject/MainView.m3419204559601235456#1901"    cd /Users/logan/Documents/iPadProject    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-generated-files.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-own-target-headers.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-all-target-headers.hmap -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-project-headers.hmap -F/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator -I/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/include -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources/i386 -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources -include /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch -c /Users/logan/Documents/iPadProject/MainView.m -o /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/MainView.o0#
+
+CCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProjectAppDelegate.o /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s302645267.812834
+e302645268.027210
+r0
+xCompileC
+xbuild/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProjectAppDelegate.o
+x/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+oIn file included from /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:9:
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h:13: error: expected specifier-qualifier-list before 'MainView'
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h:17: error: expected specifier-qualifier-list before 'MainView'
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:14: error: no declaration of property 'mainView' found in the interface
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m: In function '-[iPadProjectAppDelegate application:didFinishLaunchingWithOptions:]':
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: 'MainView' undeclared (first use in this function)
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: (Each undeclared identifier is reported only once
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: for each function it appears in.)
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: 'main' undeclared (first use in this function)
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: 'iPadProjectAppDelegate' may not respond to '-setMainView:'
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: (Messages without a matching method signature
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: will be assumed to return 'id' and accept
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: '...' as arguments.)
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:26: error: 'mainView' undeclared (first use in this function)
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m: In function '-[iPadProjectAppDelegate dealloc]':
+o/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:34: error: 'mainView' undeclared (first use in this function)
+lSLF07#2@75"Compile /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645267#302645268#0(2017"In file included from /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:9:/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h:13: error: expected specifier-qualifier-list before 'MainView'/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h:17: error: expected specifier-qualifier-list before 'MainView'/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:14: error: no declaration of property 'mainView' found in the interface/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m: In function '-[iPadProjectAppDelegate application:didFinishLaunchingWithOptions:]':/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: 'MainView' undeclared (first use in this function)/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: (Each undeclared identifier is reported only once/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: for each function it appears in.)/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:20: error: 'main' undeclared (first use in this function)/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: 'iPadProjectAppDelegate' may not respond to '-setMainView:'/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: (Messages without a matching method signature/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: will be assumed to return 'id' and accept/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:22: warning: '...' as arguments.)/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:26: error: 'mainView' undeclared (first use in this function)/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m: In function '-[iPadProjectAppDelegate dealloc]':/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m:34: error: 'mainView' undeclared (first use in this function)9(4@51"Expected specifier-qualifier-list before 'MainView'302645267#93#131#2(7@89"In file included from /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645267#18446744073709551615#0#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#9#0#9#0#0"0(13@122"Expected specifier-qualifier-list before 'MainView' in /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645267#18446744073709551615#0#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645260#13#0#13#0#0"0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645260#13#0#13#0#19"expected * before *0(4@51"Expected specifier-qualifier-list before 'MainView'302645267#224#131#2(7@89"In file included from /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645267#18446744073709551615#0#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#9#0#9#0#0"0(13@122"Expected specifier-qualifier-list before 'MainView' in /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645267#18446744073709551615#0#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645260#17#0#17#0#0"0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.h302645260#17#0#17#0#19"expected * before *0(4@60"No declaration of property 'mainView' found in the interface302645267#355#140#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#14#0#14#0#0"0(4@50"'MainView' undeclared (first use in this function)302645267#648#130#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#20#0#20#0#43"'*' undeclared (first use in this function)0(4@46"'main' undeclared (first use in this function)302645267#1020#126#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#20#0#20#0#43"'*' undeclared (first use in this function)0(22@59"'iPadProjectAppDelegate' may not respond to '-setMainView:'302645267#1146#141#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#22#0#22#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)302645267#1287#127#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#22#0#22#0#0"0(4@50"'mainView' undeclared (first use in this function)302645267#1639#130#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#26#0#26#0#43"'*' undeclared (first use in this function)0(4@50"'mainView' undeclared (first use in this function)302645267#1887#130#0(6@67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m302645163#34#0#34#0#43"'*' undeclared (first use in this function)0(0#0#67"/Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m4300911832#1937"    cd /Users/logan/Documents/iPadProject    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-generated-files.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-own-target-headers.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-all-target-headers.hmap -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-project-headers.hmap -F/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator -I/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/include -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources/i386 -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources -include /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch -c /Users/logan/Documents/iPadProject/Classes/iPadProjectAppDelegate.m -o /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/iPadProjectAppDelegate.o1#
+
+CCompileC build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/main.o /Users/logan/Documents/iPadProject/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s302645267.811405
+e302645268.068399
+r1
+xCompileC
+xbuild/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/main.o
+x/Users/logan/Documents/iPadProject/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@49"Compile /Users/logan/Documents/iPadProject/main.m302645267#302645268#0(0"0(0#0#41"/Users/logan/Documents/iPadProject/main.m4300911832#1893"    cd /Users/logan/Documents/iPadProject    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-generated-files.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-own-target-headers.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-all-target-headers.hmap -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-project-headers.hmap -F/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator -I/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/include -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources/i386 -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources -include /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch -c /Users/logan/Documents/iPadProject/main.m -o /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/logan/Documents/iPadProject/MainView.xib
+s302645261.169879
+e302645265.786011
+r1
+xCompileXIB
+x/Users/logan/Documents/iPadProject/MainView.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@23"CompileXIB MainView.xib302645261#302645265#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#47"/Users/logan/Documents/iPadProject/MainView.xib4300911832#468"    cd /Users/logan/Documents/iPadProject    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/MainView.nib /Users/logan/Documents/iPadProject/MainView.xib0#
+
+CCompileXIB /Users/logan/Documents/iPadProject/MainWindow.xib
+s302645261.145155
+e302645265.785693
+r1
+xCompileXIB
+x/Users/logan/Documents/iPadProject/MainWindow.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@25"CompileXIB MainWindow.xib302645261#302645265#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#49"/Users/logan/Documents/iPadProject/MainWindow.xib4300911832#472"    cd /Users/logan/Documents/iPadProject    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.2    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/MainWindow.nib /Users/logan/Documents/iPadProject/MainWindow.xib0#
+
+CGenerateDSYMFile /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app.dSYM /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/iPadProject
+r0
+
+CLd /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/iPadProject normal i386
+r0
+
+CProcessInfoPlistFile /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/Info.plist iPadProject-Info.plist
+s302645261.053883
+e302645261.145047
+r1
+xProcessInfoPlistFile
+x/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/Info.plist
+xiPadProject-Info.plist
+lSLF07#2@30"Process iPadProject-Info.plist302645261#302645261#0(0"0(0#0#57"/Users/logan/Documents/iPadProject/iPadProject-Info.plist31244169098821736#479"    cd /Users/logan/Documents/iPadProject    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility iPadProject-Info.plist -genpkginfo /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app/Info.plist0#
+
+CProcessPCH /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch.gch iPadProject_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s302645265.786191
+e302645267.811214
+r1
+xProcessPCH
+x/var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch.gch
+xiPadProject_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@33"Precompile iPadProject_Prefix.pch302645265#302645267#0(0"0(0#0#57"/Users/logan/Documents/iPadProject/iPadProject_Prefix.pch4300911832#1785"    cd /Users/logan/Documents/iPadProject    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-generated-files.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-own-target-headers.hmap -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-all-target-headers.hmap -iquote /Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/iPadProject-project-headers.hmap -F/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator -I/Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/include -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources/i386 -I/Users/logan/Documents/iPadProject/build/iPadProject.build/Debug-iphonesimulator/iPadProject.build/DerivedSources -c /Users/logan/Documents/iPadProject/iPadProject_Prefix.pch -o /var/folders/2R/2RFb2B5FHg8ZZoHtOkNUJE+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/iPadProject_Prefix-brisaavhgxlbpaeaadewtkrkfqaa/iPadProject_Prefix.pch.gch0#
+
+CTouch /Users/logan/Documents/iPadProject/build/Debug-iphonesimulator/iPadProject.app
+r0
+
