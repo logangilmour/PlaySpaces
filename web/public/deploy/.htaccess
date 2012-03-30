@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Deploy script"
+AuthUserFile /home/logan/passwords
+Require valid-user
