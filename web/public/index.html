@@ -1,11 +1,58 @@
 <html>
 	<head>
 		<title>
-			It works woo!
+		PlaySpaces
 		</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="text/javascript" src="dependencies/spryMap-min2.js">
+  </script>
+  <script type="text/javascript" src="dependencies/jquery-1.7.2.min.js">
+  </script>
+  <script type="text/javascript" src="MapElement.js">
+  </script>
 	</head>
 	<body>
-		<h1> Alright works with deploy script </h1>
+	<div id="content_box">
+	  Here's the content box!
+	</div>
+	<div id="map_box">
+	<img src="images/map.jpg" alt="map" />
+	</div>
+	<script type="text/javascript">
+	// Instantiate the widget when you want it to turned into a map,
+	// probably in the window.onload or $(document).ready() function.
+	$(document).ready(function(){
+    // Default parameters are listed as the parameters below
+    var map = new SpryMap({
+                          // The ID of the element being transformed into a map
+                          id : "map_box",
+                          // The width of the map (in px)
+                          width: $("#content_box").innerWidth(),
+                          // The height of the map (in px)
+                          height: $(window).innerHeight() * (3/4),
+                          // The X value of the starting map position
+                          startX: 0,
+                          // The Y value of the starting map position
+                          startY: 0,
+                          // Boolean true if the map should animate to a stop
+                          scrolling: true,
+                          // The time (in ms) that the above scrolling lasts
+                          scrollTime: 300,
+                          // Boolean true if the map disallows moving past its edges
+                          lockEdges: true,
+                          // The CSS class attached to the wrapping map div
+                          cssClass: "map_class"
+                          });
+  });
+
+  var me = new MapElement("content/one.html");
+  me.add($("#map_box"), 300, 300);
+  me.toggleVisibility();
+
+  var me2 = new MapElement("content/two.html");
+  me2.add($("#map_box"), 350, 350);
+  me2.toggleVisibility();
+	</script>
 	</body>
 </html>
 
