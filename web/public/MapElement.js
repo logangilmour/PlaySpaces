@@ -33,9 +33,20 @@ MapElement.prototype.add = function(map, x, y)
      TODO:
        - Content box ID shouldn't be hard coded
        - Need to notify other map elements using event bus */
+
+  // Need this extra variable because the scoping of the inner function changes
+  // "this"
+  var content = this.content;
   this.element.click(function()
   {
-    $("#content_box").load(this.content);
+    $("#content_box").load(content, function(response, status, xhr) 
+    {
+      if (status == "error")
+      {
+        var msg = "Sorry but there was an error: ";
+        $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
+      }
+    });
   });
 
   // Add the element to the map
