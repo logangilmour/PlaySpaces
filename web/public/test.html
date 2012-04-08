@@ -1,10 +1,23 @@
 <html>
 <head>
 <title>Testing percentages</title>
+<script type="text/javascript" src="dependencies/jquery-1.7.2.min.js">
+</script>
+<script type="text/javascript" src="Map.js">
+</script>
 </head>
 <html>
 <body>
-<div style="background:#f00; width:50%;height:50%;position:absolute;top:25%; font-size:1em%">stuff</div>
-<img src="images/map.jpg" style="width:50%;"/>
+<div data-image="images/map.jpg" class="map">
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    var map = Map($('div.map').first());
+});
+</script>
+
+
 </body>
 </html>
