@@ -7,70 +7,34 @@ Listens to events to change visibility
 
 Requires jQuery
 */
-
-function MapElement(content)
+MapElement.prototype = ImageElement.prototype;
+function MapElement(element,done)
 {
-  // this.visible = false;
-  this.element = null;
-  this.locationX = 0;
-  this.locationY = 0;
-  this.content = content;
-  this.image = 'images/dot_off.png';
-  this.handleEvent = function() { };
+    
+    ImageElement.call(this,element.data('image'),done);
+    this.element = element;
+    this.rawX=element.data('x'); // These values are used by the map to figure out where the element
+    this.rawY=element.data('y'); // should actually be placed according to size.
+    this.handleEvent = function() { }; 
+    element.css({position:"absolute"});
+    element.prepend(this.image);
+    element.css({margin:"0px",padding:"0px"});
 }
 
-MapElement.prototype.add = function(map, x, y)
+
+// set position of element - to be called by the map in order to place
+// correctly relative to size.
+MapElement.prototype.setPos = function(x, y,width)
 {
-  this.locationX = x;
-  this.locationY = y;
-  
-  this.element = $('<img src="images/dot_off.png" class="map_element">')
-                 .toggle()
-                 .css('bottom', this.locationY + 'px')
-                 .css('left', this.locationX + 'px');
-
-  /* Set up click handler to switch the content box to the content.
-     TODO:
-       - Content box ID shouldn't be hard coded
-       - Need to notify other map elements using event bus */
-
-  // Need this extra variable because the scoping of the inner function changes
-  // "this"
-  var content = this.content;
-  this.element.click(function()
-  {
-    $("#content_box").load(content, function(response, status, xhr) 
-    {
-      if (status == "error")
-      {
-        var msg = "Sorry but there was an error: ";
-        $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
-      }
-    });
-  });
-
-  // Add the element to the map
-  $(map).append(this.element);
+    this.element.css({position:"absolute",top: x, left: y, width:width});
+    this.image.css({width: "100%"});
 }
-
-MapElement.prototype.toggleVisibility = function()
+MapElement.prototype.setVisible = function(isVisible)
 {
-  this.element.toggle();
-}
-
-/*
-EventBus.prototype.add = function(callback)
-{
-    if(typeof callback != "function")
-    {
-        callback = new Function(callback);
-    }
-    this.listeners[this.listeners.length]=callback;
-}
-EventBus.prototype.fire = function(name,value)
-{
-    for(var i=0; i<this.listeners.length; i++){
-        this.listeners[i](name,value);
+    if(isVisible){
+       this.element.show(500);
+    }else{
+        this.element.hide(500);
     }
 }
-*/
+

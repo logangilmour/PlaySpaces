@@ -7,25 +7,29 @@
 // Attributes:
 //     data-image is the url of the image of the map
 
-function Map(imageDiv){
-    
-    var img = imageDiv.data("image");
-    var picWidth,picHeight;
-    console.log("image url for map: "+img);
-    
-    this.image = $("<img/>")
-        .attr("src",img)
-        .load(function() {
-            picWidth = this.width;   // Note: $(this).width() will not
-            picHeight = this.height; // work for in memory images.
-        });
 
-    this.width = picWidth;
-    this.height = picHeight; 
-    imageDiv.width("100%");
-    imageDiv.prepend(this.image);
+Map.prototype = ImageElement.prototype;
+
+function Map(element){
+    this.element=element 
+    ImageElement.call(this,imageDiv.data('image'),this.init);
+    element.width("100%");
+    element.prepend(this.image);
     this.image.width("100%");
+    element.css({position:"relative"});
+
+
 }
-
-
-
+Map.prototype.init = function(){
+    var map=this;
+    this.element.children('div.MapElement').each(function(index){
+        element = new MapElement($(this));
+        map.add(element); 
+    });
+}
+Map.prototype.add = function(element){
+   //moar eventbus
+   var calc = this.width;
+   alert(calc);
+   element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
+}

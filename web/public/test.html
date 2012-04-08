@@ -1,20 +1,20 @@
 <html>
 <head>
 <title>Testing percentages</title>
-<script type="text/javascript" src="dependencies/jquery-1.7.2.min.js">
-</script>
-<script type="text/javascript" src="Map.js">
-</script>
+<script type="text/javascript" src="dependencies/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="ImageElement.js"></script>
+<script type="text/javascript" src="MapElement.js"></script>
+<script type="text/javascript" src="Map.js"></script>
 </head>
 <html>
 <body>
-<div data-image="images/map.jpg" class="map">
-
+<div data-image="images/map.jpg" class="Map">
+    <div data-image="images/dot_off.png" data-x="25" data-y="25" class="MapElement"></div>
 </div>
 
 <script type="text/javascript">
 $(document).ready(function(){
-    var map = Map($('div.map').first());
+    var map = new Map($('div.Map').first());
 });
 </script>
 
