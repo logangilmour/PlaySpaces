@@ -1,22 +1,32 @@
 /* Map elements have the following properties:
-
-Visibility state
-Location
-Image
-Listens to events to change visibility 
-
-Requires jQuery
-*/
-
-function MapElement(content)
+ *
+ * Visibility state
+ * Location
+ * Image
+ * Listens to events to change visibility 
+ *
+ * Requires jQuery
+ */
+function MapElement(image)
 {
-  // this.visible = false;
   this.element = null;
   this.locationX = 0;
   this.locationY = 0;
-  this.content = content;
-  this.image = 'images/dot_off.png';
+
+  this.image = image;
   this.handleEvent = function() { };
+}
+
+/**
+ * Pressables paracitically extend MapElements.
+ * They have content that they can send to the Content box when pressed.
+*/
+function MapPressable(image, content)
+{
+  var that = new MapElement(image);
+  that.content = content;
+
+  return that;
 }
 
 MapElement.prototype.add = function(map, x, y)
@@ -24,7 +34,7 @@ MapElement.prototype.add = function(map, x, y)
   this.locationX = x;
   this.locationY = y;
   
-  this.element = $('<img src="images/dot_off.png" class="map_element">')
+  this.element = $('<img src="' + this.image + '" class="map_element">')
                  .toggle()
                  .css('bottom', this.locationY + 'px')
                  .css('left', this.locationX + 'px');
@@ -36,18 +46,20 @@ MapElement.prototype.add = function(map, x, y)
 
   // Need this extra variable because the scoping of the inner function changes
   // "this"
-  var content = this.content;
-  this.element.click(function()
-  {
-    $("#content_box").load(content, function(response, status, xhr) 
+  if(this.content){
+    var content = this.content;
+    this.element.click(function()
     {
-      if (status == "error")
+      $("#content_box").load(content, function(response, status, xhr) 
       {
-        var msg = "Sorry but there was an error: ";
-        $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
-      }
+        if (status == "error")
+        {
+          var msg = "Sorry but there was an error: ";
+          $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
+        }
+      });
     });
-  });
+  }
 
   // Add the element to the map
   $(map).append(this.element);
