@@ -2,6 +2,9 @@
 // that need to know what the size of their image
 // before any css shenanigans goes on is
 
+// The 'done' function is called once the image is actually loaded and the size is know.
+
+
 function ImageElement(url,done){
      
     var element = this;

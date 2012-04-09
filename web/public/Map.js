@@ -11,25 +11,22 @@
 Map.prototype = ImageElement.prototype;
 
 function Map(element){
-    this.element=element 
-    ImageElement.call(this,imageDiv.data('image'),this.init);
+    this.element=element
+    var map = this;
+    ImageElement.call(this,element.data('image'),function(index){map.init();});
     element.width("100%");
     element.prepend(this.image);
     this.image.width("100%");
     element.css({position:"relative"});
-
-
 }
 Map.prototype.init = function(){
     var map=this;
     this.element.children('div.MapElement').each(function(index){
-        element = new MapElement($(this));
-        map.add(element); 
+        var element = new MapElement($(this),function(index){map.add(element);});
     });
 }
 Map.prototype.add = function(element){
    //moar eventbus
-   var calc = this.width;
-   alert(calc);
+   var calc = element.width/this.width*100;
    element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
 }
