@@ -20,7 +20,17 @@ function MapElement(element,done)
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
 }
+/**
+ * Pressables paracitically extend MapElements.
+ * They have content that they can send to the Content box when pressed.
+*/
+function MapPressable(image, content)
+{
+  var that = new MapElement(image);
+  that.content = content;
 
+  return that;
+}
 
 // set position of element - to be called by the map in order to place
 // correctly relative to size.
@@ -29,6 +39,7 @@ MapElement.prototype.setPos = function(x, y,width)
     this.element.css({position:"absolute",top: x, left: y, width:width});
     this.image.css({width: "100%"});
 }
+
 MapElement.prototype.setVisible = function(isVisible)
 {
     if(isVisible){
