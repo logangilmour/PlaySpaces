@@ -15,3 +15,8 @@
 {
   position: absolute;
 }
+
+.map_element:active
+{
+  width: 400px;
+}
