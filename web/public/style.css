@@ -16,7 +16,7 @@
   position: absolute;
 }
 
-.map_element:hover
+.map_element:active
 {
-  bottom: 400px;
+  width: 400px;
 }
