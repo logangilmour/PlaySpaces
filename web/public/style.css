@@ -15,3 +15,8 @@
 {
   position: absolute;
 }
+
+.map_element: active
+{
+  color: #000000;
+}
