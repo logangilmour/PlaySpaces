@@ -1,22 +1,24 @@
 /* Map elements have the following properties:
- *
- * Visibility state
- * Location
- * Image
- * Listens to events to change visibility 
- *
- * Requires jQuery
- */
-function MapElement(image)
+
+Visibility state
+Location
+Image
+Listens to events to change visibility 
+
+Requires jQuery
+*/
+MapElement.prototype = ImageElement.prototype;
+function MapElement(element,done)
 {
-  this.element = null;
-  this.locationX = 0;
-  this.locationY = 0;
-
-  this.image = image;
-  this.handleEvent = function() { };
+    ImageElement.call(this,element.data('image'),done);
+    this.element = element;
+    this.rawX=element.data('x'); // These values are used by the map to figure out where the element
+    this.rawY=element.data('y'); // should actually be placed according to size.
+    this.handleEvent = function() { }; 
+    element.css({position:"absolute"});
+    element.prepend(this.image);
+    element.css({margin:"0px",padding:"0px"});
 }
-
 /**
  * Pressables paracitically extend MapElements.
  * They have content that they can send to the Content box when pressed.
@@ -89,24 +91,20 @@ MapElement.prototype.add = function(map, x, y)
   $(map).append(this.element);
 }
 
-MapElement.prototype.toggleVisibility = function()
+// set position of element - to be called by the map in order to place
+// correctly relative to size.
+MapElement.prototype.setPos = function(x, y,width)
 {
-  this.element.toggle();
+    this.element.css({position:"absolute",top: x, left: y, width:width});
+    this.image.css({width: "100%"});
 }
 
-/*
-EventBus.prototype.add = function(callback)
+MapElement.prototype.setVisible = function(isVisible)
 {
-    if(typeof callback != "function")
-    {
-        callback = new Function(callback);
-    }
-    this.listeners[this.listeners.length]=callback;
-}
-EventBus.prototype.fire = function(name,value)
-{
-    for(var i=0; i<this.listeners.length; i++){
-        this.listeners[i](name,value);
+    if(isVisible){
+       this.element.show(500);
+    }else{
+        this.element.hide(500);
     }
 }
-*/
+
