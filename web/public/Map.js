@@ -24,6 +24,9 @@ Map.prototype.init = function(){
     this.element.children('div.MapElement').each(function(index){
         var element = new MapElement($(this),function(index){map.add(element);});
     });
+    this.element.children('div.MapButton').each(function(index){
+        var element = new MapButton($(this),function(index){map.add(element);}, "content/one.html");
+    });
 }
 Map.prototype.add = function(element){
    //moar eventbus

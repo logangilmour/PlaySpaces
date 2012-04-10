@@ -18,6 +18,7 @@ function MapElement(element,done)
     element.css({position:"absolute"});
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
+    
 }
 /*
 MapElement.prototype.add = function(map, x, y)
