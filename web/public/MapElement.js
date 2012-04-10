@@ -19,7 +19,7 @@ function MapElement(element,done)
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
 }
-
+/*
 MapElement.prototype.add = function(map, x, y)
 {
   this.locationX = x;
@@ -39,10 +39,10 @@ MapElement.prototype.add = function(map, x, y)
 	}
   }
   
-  /* TODO:
-  - Content box IDs shouldn't be hard coded
-  - Need to notify other map elements using event bus 
-  */
+  // TODO:
+  //- Content box IDs shouldn't be hard coded
+  //- Need to notify other map elements using event bus 
+  
   var contentBox = $("#content_box");
 	   
   // Set up mouse handlers to switch the content box to the content. 
@@ -74,7 +74,7 @@ MapElement.prototype.add = function(map, x, y)
   // Add the element to the map
   $(map).append(this.element);
 }
-
+*/
 // set position of element - to be called by the map in order to place
 // correctly relative to size.
 MapElement.prototype.setPos = function(x, y,width)
