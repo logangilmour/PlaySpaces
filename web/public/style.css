@@ -5,18 +5,18 @@
  border: 2px solid #000;
 }
 
-.map_class
+.Map
 {
   padding: 0;
   margin: 0;
 }
 
-.map_element
+.MapElement
 {
   position: absolute;
 }
 
-.map_element:active
+.MapElement:active
 {
   width: 400px;
 }
