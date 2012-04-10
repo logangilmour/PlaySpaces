@@ -20,11 +20,16 @@ function MapElement(image)
 /**
  * Pressables paracitically extend MapElements.
  * They have content that they can send to the Content box when pressed.
+ * Pressables can have content that appears/plays only when held added to them.
 */
 function MapPressable(image, content)
 {
   var that = new MapElement(image);
   that.content = content;
+  that.setHoldContent = function(content)
+  {
+	this.holdContent = content;
+  }
 
   return that;
 }
@@ -38,26 +43,45 @@ MapElement.prototype.add = function(map, x, y)
                  .toggle()
                  .css('bottom', this.locationY + 'px')
                  .css('left', this.locationX + 'px');
+				 
+  var contentError = function (response, status, xhr)
+  {
+	if (status == "error")
+	{
+	  var msg = "Sorry but there was an error: ";
+	  $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
+	}
+  }
+  
+  /* TODO:
+  - Content box IDs shouldn't be hard coded
+  - Need to notify other map elements using event bus 
+  */
+  var contentBox = $("#content_box");
+	   
+  // Set up mouse handlers to switch the content box to the content. 
+  // These both need an extra variable because the inner function's scope
+  // changes what "this" resolves to
+  if(this.holdContent){
+	var holdContent = this.holdContent;
+	var origContent;
+	this.element.mousedown(function()
+	{
+	  origContent = contentBox.html();
+	  contentBox.load(holdContent, contentError);
+    });
+	
+	this.element.mouseup(function()
+	{
+	  contentBox.html(origContent);
+    });
+  }
 
-  /* Set up click handler to switch the content box to the content.
-     TODO:
-       - Content box ID shouldn't be hard coded
-       - Need to notify other map elements using event bus */
-
-  // Need this extra variable because the scoping of the inner function changes
-  // "this"
   if(this.content){
     var content = this.content;
     this.element.click(function()
     {
-      $("#content_box").load(content, function(response, status, xhr) 
-      {
-        if (status == "error")
-        {
-          var msg = "Sorry but there was an error: ";
-          $("#content_box").html(msg + xhr.status + " " + xhr.statusText);
-        }
-      });
+      contentBox.load(content, contentError);
     });
   }
 

@@ -18,6 +18,17 @@
 		<div id="map_box">
 			<img src="content/image/map.jpg" alt="map" />
 		</div>
+		
+		<!--
+		<div id="dot1" class="MapDot">
+		</div>
+		<div id="dot2" class="MapDot">
+		</div>
+		<div id="dot3" class="MapDot">
+		</div>
+		<div class="MapElement">
+		</div>
+		-->
 		<script type="text/javascript">
 			// Instantiate the widget when you want it to turned into a map,
 			// probably in the window.onload or $(document).ready() function.
@@ -54,7 +65,8 @@
 			dot2.add($("#map_box"), 350, 350);
 			//dot2.toggleVisibility();
 			
-			var dot3 = new MapPressable("gui/dot_off.png", "content/three.html");
+			var dot3 = new MapPressable("gui/cameras/yard_house_view.png", null);
+			dot3.setHoldContent("content/image/yard_house.html");
 			dot3.add($("#map_box"), 250, 250);
 			//dot3.toggleVisibility();
 			
