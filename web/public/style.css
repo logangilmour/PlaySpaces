@@ -49,3 +49,8 @@ html, body
 	-moz-box-shadow: 2px 2px 2px #888888;
 	box-shadow: 2px 2px 2px #888888;
 }
+
+.hidden_content
+{
+  display: none;
+}

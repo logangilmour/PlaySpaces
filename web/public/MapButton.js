@@ -13,15 +13,7 @@ function MapButton(image, done, content)
   }
 	
 	var contentBox = $("#content_box");
-	this.content="content/one.html";
-	var contentError = function (response, status, xhr)
-	{
-		if (status == "error")
-		{
-			var msg = "Sorry but there was an error: ";
-			contentBox.html(msg + xhr.status + " " + xhr.statusText);
-		}
-	}
+	this.content="content1";
 	
 	that.element.click(function()
 	{
@@ -29,7 +21,7 @@ function MapButton(image, done, content)
 		that.setImage(that.element.data('image'));
 		if(content)
 		{
-			contentBox.load(content, contentError);
+			contentBox.html($("#" + content).html());
 		}
 	});
 
