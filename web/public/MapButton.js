@@ -25,8 +25,15 @@ function MapButton(image, done, content)
 	
 	that.element.click(function()
 	{
+<<<<<<< HEAD
 		that.element.data("image", "gui/dot_on.png");
 		if(content){
+=======
+		that.element.data('image', 'gui/dot_on.png');
+		that.setImage(that.element.data('image'));
+		if(content)
+		{
+>>>>>>> 4e9199220315b216205f184780abc8aefe7202c5
 			contentBox.load(content, contentError);
 		}
 	});
