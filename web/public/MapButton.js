@@ -25,7 +25,7 @@ function MapButton(image, done, content)
 	
 	that.element.click(function()
 	{
-		$(that.element).css('data-image', 'gui/dot_on.png');
+		that.element.data("image", "gui/dot_on.png");
 		if(content){
 			contentBox.load(content, contentError);
 		}
