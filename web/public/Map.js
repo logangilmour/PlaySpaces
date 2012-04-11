@@ -27,6 +27,9 @@ Map.prototype.init = function(){
     this.element.children('div.MapButton').each(function(index){
         var element = new MapButton($(this),function(index){map.add(element);}, "content/one.html");
     });
+    this.element.children('div.MapDot').each(function(index){
+        var element = new MapButton($(this),function(index){map.add(element);}, "<img src=\"content/image/yard_house.png\" alt=\"\">", false);
+    });
 }
 Map.prototype.add = function(element){
    //moar eventbus
