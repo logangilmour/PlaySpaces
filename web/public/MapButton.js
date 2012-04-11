@@ -4,7 +4,7 @@
  * Pressables can have content that appears/plays only when held added to them.
  * isPermanent 
 */
-function MapButton(image, done, content, holdContent)
+function MapButton(image, done, contentId, holdContentId, isDot)
 {
   var that = new MapElement(image, done);
   that.content = content;
@@ -14,37 +14,31 @@ function MapButton(image, done, content, holdContent)
   }
 	
 	var contentBox = $("#content_box");
-	this.content="content/one.html";
-	var contentError = function (response, status, xhr)
-	{
-		if (status == "error")
-		{
-			var msg = "Sorry but there was an error: ";
-			contentBox.html(msg + xhr.status + " " + xhr.statusText);
-		}
-	}
+	this.content="content1";
 	
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
 	that.element.mousedown(function()
 	{
-		if(content){
-			contentBox.load(content, contentError);
+		if(contentId) {
+			contentBox.html($("#" + contentId).html());
 		}
 		
-		if(holdContent){
+		if(holdContentId){
 			origContent = contentBox.html();
-			contentBox.append("dood");
+			contentBox.append($("#" + holdContentId).html());
 		}
 	});
 	
 	that.element.mouseup(function()
 	{
 		// change state when touched
-		that.element.data('image', 'gui/dot_on.png');
-		that.setImage(that.element.data('image'));
+		if(isDot){
+			that.element.data('image', 'gui/dot_on.png');
+			that.setImage(that.element.data('image'));	
+		}
 		
-		if(holdContent){
+		if(holdContentId){
 			contentBox.html(origContent);
 		}
 	});
