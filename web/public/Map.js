@@ -19,16 +19,29 @@ function Map(element){
     this.image.width("100%");
     element.css({position:"relative"});
 }
-Map.prototype.init = function(){
-    var map=this;
-    this.element.children('div.MapElement').each(function(index){
-        var element = new MapElement($(this),function(index){map.add(element);});
+
+Map.prototype.init = function()
+{
+    var map = this;
+
+    this.element.children('div.MapElement').each(function(index) {
+      var element = new MapElement($(this),
+                                   function(index){map.add(element);});
     });
-    this.element.children('div.MapButton').each(function(index){
-        var element = new MapButton($(this),function(index){map.add(element);}, "content/one.html");
+    
+    this.element.children('div.MapButton').each(function(index, child) {
+      var element = new MapButton($(this),
+                                  function(index){map.add(element);},
+                                  $(child).data('content'),
+                                  $(child).data('hold-content'));
     });
-    this.element.children('div.MapDot').each(function(index){
-        var element = new MapButton($(this),function(index){map.add(element);}, "<img src=\"content/image/yard_house.png\" alt=\"\">", false);
+    
+    this.element.children('div.MapDot').each(function(index, child) {
+      var element = new MapButton($(this),
+                                  function(index){map.add(element);},
+                                  $(child).data('content'),
+                                  $(child).data('hold-content'),
+                                  true);
     });
 }
 Map.prototype.add = function(element){

@@ -81,15 +81,15 @@ MapElement.prototype.add = function(map, x, y)
 // correctly relative to size.
 MapElement.prototype.setPos = function(x, y,width)
 {
-    this.element.css({position:"absolute",top: x, left: y, width:width});
+    this.element.css({position:"absolute", top: y, left: x, width: width});
     this.image.css({width: "100%"});
 }
 
 MapElement.prototype.setVisible = function(isVisible)
 {
-    if(isVisible){
+    if(isVisible) {
        this.element.show(500);
-    }else{
+    } else {
         this.element.hide(500);
     }
 }
