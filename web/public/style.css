@@ -16,6 +16,11 @@
 	position: absolute;
 }
 
+.MapButton:hover
+{
+  cursor: pointer;
+}
+
 .MapButton
 {
 	height:26px;
