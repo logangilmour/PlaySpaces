@@ -26,7 +26,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		
 		if(holdContentId){
 			origContent = contentBox.html();
-			contentBox.append($("#" + holdContentId).html());
+			contentBox.append(makeAutoplay($("#" + holdContentId).first()).html());
 		}
 	});
 	
@@ -44,6 +44,12 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	});
 
   return that;
+}
+
+function makeAutoplay(content){
+	content.find("audio").attr("autoplay", "autoplay");
+	
+	return content;
 }
 
 
