@@ -36,6 +36,10 @@ function MapButton(image, done, content, isPermanent)
 	
 	that.element.mouseup(function()
 	{
+		// change state when touched
+		that.element.data('image', 'gui/dot_on.png');
+		that.setImage(that.element.data('image'));
+		
 		if(content){
 			if(isPermanent){
 				contentBox.load(content, contentError);

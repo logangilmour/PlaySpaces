@@ -10,7 +10,7 @@ Requires jQuery
 MapElement.prototype = ImageElement.prototype;
 function MapElement(element,done)
 {
-    ImageElement.call(this,element.data('image'),done);
+    ImageElement.call(this, element.data('image'),done);
     this.element = element;
     this.rawX=element.data('x'); // These values are used by the map to figure out where the element
     this.rawY=element.data('y'); // should actually be placed according to size.
@@ -92,5 +92,10 @@ MapElement.prototype.setVisible = function(isVisible)
     }else{
         this.element.hide(500);
     }
+}
+
+MapElement.prototype.setImage = function(image_url)
+{
+  this.image.attr('src', image_url);
 }
 

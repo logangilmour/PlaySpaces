@@ -1,6 +1,8 @@
+<!doctype html>
 <html>
   <head>
     <title>PlaySpaces</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="dependencies/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="ImageElement.js"></script>
     <script type="text/javascript" src="MapElement.js"></script>
@@ -8,18 +10,19 @@
     <script type="text/javascript" src="Map.js"></script>
   </head>
   <body>
+    <div id="padding_box"></div>
     <div id="content_box">
       Here's the content box!
     </div>
-    <div data-image="content/image/map.jpg" class="Map">
-      <div data-image="gui/dot_off.png" data-x="25" data-y="25" class="MapElement"></div>
-      <div data-image="gui/dot_off.png" data-x="0" data-y="0" class="MapButton"></div>
-      <div data-image="gui/dot_off.png" data-x="0" data-y="0" class="MapDot"></div>
+    <div data-image="content/image/map.gif" class="Map">
+      <div data-image="gui/dot_on.png" data-x="25" data-y="25" class="MapElement"></div>
+      <div data-image="gui/dot_off.png" data-x="5" data-y="5" class="MapButton" id="button1"></div>
+      <div data-image="gui/dot_off.png" data-x="50" data-y="50" class="MapDot"></div>
     </div>
     <script type="text/javascript">
       $(document).ready(function(){
-        var map = new Map($('div.Map').first());
-      });
-    </script>
+          var map = new Map($('div.Map').first());
+          });
+     </script>
   </body>
 </html>
