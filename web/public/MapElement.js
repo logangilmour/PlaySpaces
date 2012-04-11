@@ -18,8 +18,8 @@ function MapElement(element,done)
     element.css({position:"absolute"});
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
-    
 }
+
 /*
 MapElement.prototype.add = function(map, x, y)
 {
@@ -76,11 +76,12 @@ MapElement.prototype.add = function(map, x, y)
   $(map).append(this.element);
 }
 */
+
 // set position of element - to be called by the map in order to place
 // correctly relative to size.
 MapElement.prototype.setPos = function(x, y,width)
 {
-    this.element.css({position:"absolute",top: x, left: y, width:width});
+    this.element.css({position:"absolute", top: y, left: x, width: width});
     this.image.css({width: "100%"});
 }
 
