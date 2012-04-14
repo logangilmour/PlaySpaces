@@ -48,14 +48,22 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 }
 
 function startAutoplay(content){
-	content.find("audio")[0].play();
+	var audioElement = content.find("audio")[0];
+	
+	if(audioElement){
+		audioElement.play();
+	}
 	
 	return content;
 }
 
 function stopAutoplay(content){
-	content.find("audio")[0].pause();
-	content.find("audio")[0].currentTime = 0;
+	var audioElement = content.find("audio")[0];
+	
+	if(audioElement){
+		audioElement.pause();
+		audioElement.currentTime = 0;
+	}
 	
 	return content;
 }
