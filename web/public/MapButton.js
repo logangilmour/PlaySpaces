@@ -26,7 +26,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		
 		if(holdContentId){
 			origContent = contentBox.html();
-			contentBox.append(makeAutoplay($("#" + holdContentId).first()).html());
+			startAutoplay($("#" + holdContentId));
 		}
 	});
 	
@@ -39,6 +39,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		}
 		
 		if(holdContentId){
+			stopAutoplay($("#" + holdContentId));
 			contentBox.html(origContent);
 		}
 	});
@@ -46,8 +47,15 @@ function MapButton(image, done, contentId, holdContentId, isDot)
   return that;
 }
 
-function makeAutoplay(content){
-	content.find("audio").attr("autoplay", "autoplay");
+function startAutoplay(content){
+	content.find("audio")[0].play();
+	
+	return content;
+}
+
+function stopAutoplay(content){
+	content.find("audio")[0].pause();
+	content.find("audio")[0].currentTime = 0;
 	
 	return content;
 }

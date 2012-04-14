@@ -26,6 +26,7 @@ html, body
 	margin: 0;
 }
 
+/*
 .Map:active
 {
 	-moz-transform: scale(1.5);
@@ -35,6 +36,7 @@ html, body
 	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto
 	expand', M11=2, M12=-0, M22=2);
 }
+*/
 
 .MapElement
 {
