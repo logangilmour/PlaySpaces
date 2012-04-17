@@ -18,6 +18,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
+	var holdContent = holdContentId? $("#" + holdContentId) : null;
 	that.element.mousedown(function()
 	{
 		if(contentId) {
@@ -26,7 +27,8 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		
 		if(holdContentId){
 			origContent = contentBox.html();
-			startAutoplay($("#" + holdContentId));
+			showMedia(holdContent);
+			startAutoplay(holdContent);
 		}
 	});
 	
@@ -34,17 +36,46 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	{
 		// change state when touched
 		if(isDot){
-			that.element.data('image', 'gui/dot_on.png');
+			that.element.data('image', 'gui/dot_off.png');
 			that.setImage(that.element.data('image'));	
 		}
 		
 		if(holdContentId){
 			stopAutoplay($("#" + holdContentId));
+			hideMedia();
 			contentBox.html(origContent);
 		}
 	});
 
   return that;
+}
+
+/**
+ * Builds an overlay div that will house the media
+ */
+function showMedia(content, camX, camY, camFacing){
+	var overlay = $('<div></div>');
+  overlay.attr("id", "overlay");
+  overlay.attr("class", "overlay");
+	overlay.mouseup(function(){
+		hideMedia();
+	});
+	
+	var imageElement = content.find("img").clone(true)[0];
+	var videoElement = content.find("video").clone(true)[0];
+	
+	overlay.append(imageElement);
+	overlay.append(videoElement);
+	
+  $("body").append(overlay);
+	
+	if(videoElement){
+		videoElement.play();
+	}
+}
+
+function hideMedia(){
+	$("#overlay").detach();
 }
 
 function startAutoplay(content){
