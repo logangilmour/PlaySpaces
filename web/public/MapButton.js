@@ -27,7 +27,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		
 		if(holdContentId){
 			origContent = contentBox.html();
-			showMedia(holdContent);
+			showMedia(holdContent, that);
 			startAutoplay(holdContent);
 		}
 	});
@@ -53,13 +53,16 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 /**
  * Builds an overlay div that will house the media
  */
-function showMedia(content, camX, camY, camFacing){
+function showMedia(content, camMapElement){
+	var camDomElement = camMapElement.element;
 	var overlay = $('<div></div>');
   overlay.attr("id", "overlay");
   overlay.attr("class", "overlay");
 	overlay.mouseup(function(){
 		hideMedia();
 	});
+	overlay.css("top", camDomElement.offset().top);
+	overlay.css("left", camDomElement.offset().left);
 	
 	var imageElement = content.find("img").clone(true)[0];
 	var videoElement = content.find("video").clone(true)[0];

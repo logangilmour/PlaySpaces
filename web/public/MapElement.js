@@ -14,8 +14,18 @@ function MapElement(element,done)
     this.element = element;
     this.rawX=element.data('x'); // These values are used by the map to figure out where the element
     this.rawY=element.data('y'); // should actually be placed according to size.
-    this.handleEvent = function() { }; 
+    this.facing = element.data("facing");
+    
+    this.handleEvent = function() { };
+    
     element.css({position:"absolute"});
+    if(this.facing){
+      element.css("-moz-transform", "rotate(" + this.facing + "deg)");
+      element.css("-webkit-transform", "rotate(" + this.facing + "deg)");
+      element.css("-o-transform", "rotate(" + this.facing + "deg)");
+      element.css("-ms-transform", "rotate(" + this.facing + "deg)");
+    }
+
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
 }
