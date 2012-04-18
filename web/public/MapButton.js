@@ -67,8 +67,10 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		// every element in the list
 		var enableList = $(this).data("enables");
 		if (enableList && enableList.length > 0){
+			alert("inside the if");
 			var enable = enableList.split(",");
 			for (var i = 0; i < enable.length; i++){
+				alert("inside the for");
 				$("#" + enable[i].trim()).css("display", "block");
 			}
 		}
