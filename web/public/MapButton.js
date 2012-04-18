@@ -68,7 +68,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 			if (enableList && enableList.length > 0){
 				var enable = enableList.split(",");
 				for (var i = 0; i < enable.length; i++){
-					$("#" + enable[i]).css("display", "block");
+					$("#" + enable[i].trim()).css("display", "block");
 				}
 			}
 			});
