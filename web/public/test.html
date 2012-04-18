@@ -20,6 +20,19 @@
 				id="button1" data-content="page1" data-hold-content="page1Audio"
 				data-enables="button2, button4, royVidButton">
 			</div>
+			<script>
+				document.getElementById('button1').addEventListener('touchstart', function(ev){
+					if (ev.touches.item(0) == ev.targetTouches.item(0)){
+						alert('Hello Touch');
+					}
+					if (ev.touches.length == ev.targetTouches.length){
+						alert('All points are on target element');
+					}
+					if (ev.touches.length > 1){
+						alert('Hello multiple touches');
+					}
+				}, false);
+			</script>
 			<div data-image="gui/dot_on.png" data-x="10" data-y="5" class="MapDot" 
 				id="button2" data-content="page2" data-hold-content="page2Audio"
 				data-enables="button3">
