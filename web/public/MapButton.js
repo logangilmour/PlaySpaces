@@ -65,7 +65,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 			// loops through buttons data-enables attribute and makes visible
 			// every element in the list
 			var enableList = $(this).data("enables");
-			if (enableList.length > 0){
+			if (enableList && enableList.length > 0){
 				var enable = enableList.split(",");
 				for (var i = 0; i < enable.length; i++){
 					$("#" + enable[i]).css("display", "block");
