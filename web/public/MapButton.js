@@ -19,7 +19,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
 	var holdContent = holdContentId? $("#" + holdContentId) : null;
-	that.element.mousedown(function()
+	that.element.mousedown(function(event)
 			{
 			$(".hidden_content").each(function(){
 				stopAutoplay($(this));
@@ -27,6 +27,8 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 
 			if(event.preventDefault){
 			event.preventDefault();
+			}else{
+			event.returnValue = false;
 			}
 
 			if(contentId) {
@@ -40,7 +42,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 			}
 			});
 
-	that.element.mouseup(function()
+	that.element.mouseup(function(event)
 			{
 
 			if (event.preventDefault){
