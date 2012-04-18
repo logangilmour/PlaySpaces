@@ -162,8 +162,8 @@ function stopAutoplay(content){
 	var audioElement = content.find("audio")[0];
 
 	if(audioElement){
-		audioElement.pause();
 		audioElement.currentTime = 0;
+		audioElement.pause();
 	}
 
 	return content;
