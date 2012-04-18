@@ -3,6 +3,21 @@ html, body
   height: 100%;
 }
 
+div {
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-webkit-user-drag: none;
+}
+
+.hidden_content, .MapButton, .MapElement, .MapDot
+{
+	display: none;
+}
+
+#button1
+{
+	display: block;
+}
 #content_box
 {
 	width: 100%;
@@ -49,7 +64,7 @@ html, body
   cursor: pointer;
 }
 
-.MapDot
+div.MapDot
 {
 	height:26px;
 	border: 1px solid #FFFFFF;
@@ -61,11 +76,6 @@ html, body
 {
 	-moz-box-shadow: 2px 2px 2px #888888;
 	box-shadow: 2px 2px 2px #888888;
-}
-
-.hidden_content
-{
-  display: none;
 }
 
 .overlay

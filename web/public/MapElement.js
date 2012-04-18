@@ -52,4 +52,3 @@ MapElement.prototype.setImage = function(image_url)
 {
   this.image.attr('src', image_url);
 }
-

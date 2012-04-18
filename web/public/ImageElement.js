@@ -14,5 +14,6 @@ function ImageElement(url,done){
             element.width = this.width;   // Note: $(this).width() will not
             element.height = this.height; // work for in memory images.
             done();
-        });
+        })
+
 } 

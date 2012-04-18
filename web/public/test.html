@@ -14,41 +14,42 @@
   <div id="padding_box"></div>
   <div id="content_box"></div>
   <div data-image="content/image/map.gif" class="Map">
-    <div data-image="gui/img_7.png" data-x="25" data-y="25" class="MapElement">
+    <div data-image="gui/img_7.png" data-x="25" data-y="25" class="MapElement ui-draggable-disabled">
     </div>
-    <div data-image="gui/dot_on.png" data-x="5" data-y="5" class="MapDot" 
-         id="button1" data-content="page1" data-hold-content="page1Audio">
+    <div data-image="gui/dot_on.png" data-x="5" data-y="10" class="MapDot" 
+		 id="button1" data-content="page1" data-hold-content="page1Audio"
+		 onmousedown="if (event.preventDefault) event.preventDefault()">
     </div>
     <div data-image="gui/dot_on.png" data-x="10" data-y="5" class="MapDot" 
-         id="button1" data-content="page2" data-hold-content="page2Audio">
+         id="button2" data-content="page2" data-hold-content="page2Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="15" data-y="5" class="MapDot" 
-         id="button1" data-content="page3" data-hold-content="page3Audio">
+         id="button3" data-content="page3" data-hold-content="page3Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="20" data-y="5" class="MapDot" 
-         id="button1" data-content="page4" data-hold-content="page4Audio">
+         id="button4" data-content="page4" data-hold-content="page4Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="25" data-y="5" class="MapDot" 
-         id="button1" data-content="page5" data-hold-content="page5Audio">
+         id="button5" data-content="page5" data-hold-content="page5Audio">
     </div>
         <div data-image="gui/dot_on.png" data-x="30" data-y="5" class="MapDot" 
-         id="button1" data-content="page6" data-hold-content="page6Audio">
+         id="button6" data-content="page6" data-hold-content="page6Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="35" data-y="5" class="MapDot" 
-         id="button1" data-content="page7" data-hold-content="page7Audio">
+         id="button7" data-content="page7" data-hold-content="page7Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="40" data-y="5" class="MapDot" 
-         id="button1" data-content="page8" data-hold-content="page8Audio">
+         id="button8" data-content="page8" data-hold-content="page8Audio">
     </div>
     <div data-image="gui/dot_on.png" data-x="45" data-y="5" class="MapDot" 
-         id="button1" data-content="page9" data-hold-content="page9Audio">
+         id="button9" data-content="page9" data-hold-content="page9Audio">
     </div>
     <div data-image="gui/cameras/camera.png" data-x="45" data-y="25"
-         class="MapButton" id="button1" data-hold-content="yard_house"
+         class="MapButton" id="camera1" data-hold-content="yard_house"
          data-facing="45">
     </div>
     <div data-image="gui/cameras/vidcam.png" data-x="15" data-y="15" class="MapButton" 
-         id="button1" data-facing="90" data-hold-content="roy_rogers">
+         id="royVidButton" data-facing="90" data-hold-content="roy_rogers">
     </div>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -141,6 +142,6 @@
       <source src="content/video/video1.ogv" type="video/ogg" />
       <source src="content/video/video1.m4v" type="video/m4v" /> 
     </video>
-  </div>
+ </div>
 </body>
 </html>
