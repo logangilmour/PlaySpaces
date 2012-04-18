@@ -21,14 +21,15 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	var holdContent = holdContentId? $("#" + holdContentId) : null;
 	that.element.mousedown(function(event)
 			{
+
+			// stops playback of any and all audio recorings
 			$(".hidden_content").each(function(){
 				stopAutoplay($(this));
 				});
 
+			// prevents the dragging of map buttons
 			if(event.preventDefault){
 			event.preventDefault();
-			}else{
-			event.returnValue = false;
 			}
 
 			if(contentId) {
@@ -61,6 +62,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 			contentBox.html(origContent);
 			}
 
+			// finds ID of current button and makes visible the next button
 			var currId = $(this).attr("id");
 			var testRegEx = currId.match("[0-9]");
 			var test = testRegEx * 1;
