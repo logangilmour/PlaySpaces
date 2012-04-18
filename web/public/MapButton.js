@@ -26,7 +26,6 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		alert("inside touch down");
 		// stops playback of any and all audio recorings
 		$(".hidden_content").each(function(){
-				alert("inside each loop");
 				stopAutoplay($(this));
 				});
 
