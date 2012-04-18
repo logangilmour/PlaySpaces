@@ -47,7 +47,6 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	var buttonRelease = function(event)
 	{
 
-		alert("inside touch up");
 		if (event.preventDefault){
 			event.preventDefault();
 		}
@@ -67,6 +66,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		// loops through buttons data-enables attribute and makes visible
 		// every element in the list
 		var enableList = $(this).data("enables");
+		alert("just outside if");
 		if (enableList && enableList.length > 0){
 			alert("inside the if");
 			var enable = enableList.split(",");
