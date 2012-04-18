@@ -19,59 +19,65 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
 	var holdContent = holdContentId? $("#" + holdContentId) : null;
-	that.element.mousedown(function(event)
-			{
 
-			// stops playback of any and all audio recorings
-			$(".hidden_content").each(function(){
+	var buttonClick = function(event)
+	{
+
+		// stops playback of any and all audio recorings
+		$(".hidden_content").each(function(){
 				stopAutoplay($(this));
 				});
 
-			// prevents the dragging of map buttons
-			if(event.preventDefault){
+		// prevents the dragging of map buttons
+		if(event.preventDefault){
 			event.preventDefault();
-			}
+		}
 
-			if(contentId) {
+		if(contentId) {
 			contentBox.html($("#" + contentId).html());
-			}
+		}
 
-			if(holdContentId){
+		if(holdContentId){
 			origContent = contentBox.html();
 			showMedia(holdContent, that);
 			startAutoplay(holdContent);
-			}
-			});
+		}
+	};
 
-	that.element.mouseup(function(event)
-			{
+	var buttonRelease = function(event)
+	{
 
-			if (event.preventDefault){
+		if (event.preventDefault){
 			event.preventDefault();
-			}
+		}
 
-			// change state when touched
-			if(isDot){
+		// change state when touched
+		if(isDot){
 			that.element.data('image', 'gui/dot_off.png');
 			that.setImage(that.element.data('image'));	
-			}
+		}
 
-			if(holdContentId){
+		if(holdContentId){
 			stopAutoplay($("#" + holdContentId));
 			hideMedia();
 			contentBox.html(origContent);
-			}
+		}
 
-			// loops through buttons data-enables attribute and makes visible
-			// every element in the list
-			var enableList = $(this).data("enables");
-			if (enableList && enableList.length > 0){
-				var enable = enableList.split(",");
-				for (var i = 0; i < enable.length; i++){
-					$("#" + enable[i].trim()).css("display", "block");
-				}
+		// loops through buttons data-enables attribute and makes visible
+		// every element in the list
+		var enableList = $(this).data("enables");
+		if (enableList && enableList.length > 0){
+			var enable = enableList.split(",");
+			for (var i = 0; i < enable.length; i++){
+				$("#" + enable[i].trim()).css("display", "block");
 			}
-			});
+		}
+	};
+
+	that.element.on("mousedown", buttonClick);
+	that.element.on("mouseup", buttonRelease);
+	that.element.on("touchstart", buttonClick);
+	that.element.on("touchend", buttonRelease);
 
 	return that;
 }
