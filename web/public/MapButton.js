@@ -62,12 +62,15 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 			contentBox.html(origContent);
 			}
 
-			// finds ID of current button and makes visible the next button
-			var currId = $(this).attr("id");
-			var testRegEx = currId.match("[0-9]");
-			var test = testRegEx * 1;
-			test++;
-			$("#button"+test).css("display", "block");
+			// loops through buttons data-enables attribute and makes visible
+			// every element in the list
+			var enableList = $(this).data("enables");
+			if (enableList.length > 0){
+				var enable = enableList.split(",");
+				for (var i = 0; i < enable.length; i++){
+					$("#" + enable[i]).css("display", "block");
+				}
+			}
 			});
 
 	return that;
