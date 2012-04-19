@@ -14,11 +14,14 @@
 		<div id="padding_box"></div>
 		<div id="content_box"></div>
 		<div data-image="content/image/map.gif" class="Map">
-			<div data-image="gui/img_7.png" data-x="25" data-y="25"> 
+      <!-- dots and map elements -->
+			<div data-image="gui/tennis_court.png" data-x="25" data-y="25"> 
 			</div>
+      
 			<div data-image="gui/dot_on.png" data-x="5" data-y="10" class="MapDot" 
 				id="button1" data-content="page1" data-hold-content="page1Audio"
-				data-enables="button2, button4, royVidButton">
+				data-enables="button2, button4, royVidButton, camera1, camera2, camera3,
+                        camera4, camera5, camera6, camera7">
 			</div>
 			<div data-image="gui/dot_on.png" data-x="10" data-y="5" class="MapDot" 
 				id="button2" data-content="page2" data-hold-content="page2Audio"
@@ -52,18 +55,47 @@
 				id="button9" data-content="page9" data-hold-content="page9Audio"
 				data-enables="camera1,royVidButton">
 			</div>
-			<div data-image="gui/cameras/camera.png" data-x="45" data-y="25"
-				class="MapButton" id="camera1" data-hold-content="yard_house"
-				data-facing="45">
+      
+      <!-- Photo Cameras -->
+      <div data-image="gui/cameras/camera.png" data-x="5" data-y="20"
+				class="MapButton" id="camera1" data-hold-content="bedroom_yard_photo"
+				data-facing="85">
 			</div>
+      <div data-image="gui/cameras/camera.png" data-x="15" data-y="20"
+				class="MapButton" id="camera2" data-hold-content="hill_yard_photo"
+				data-facing="167">
+			</div>
+      <div data-image="gui/cameras/camera.png" data-x="25" data-y="20"
+				class="MapButton" id="camera3" data-hold-content="old_house_photo"
+				data-facing="22">
+			</div>
+      <div data-image="gui/cameras/camera.png" data-x="35" data-y="20"
+				class="MapButton" id="camera4" data-hold-content="summer_tree_photo"
+				data-facing="278">
+			</div>
+      <div data-image="gui/cameras/camera.png" data-x="45" data-y="20"
+				class="MapButton" id="camera5" data-hold-content="window_yard_photo"
+				data-facing="116">
+			</div>
+      <div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
+				class="MapButton" id="camera6" data-hold-content="winter_tree_photo"
+				data-facing="278">
+			</div>
+      <div data-image="gui/cameras/camera.png" data-x="65" data-y="20"
+				class="MapButton" id="camera7" data-hold-content="yard_house_photo"
+				data-facing="269">
+			</div>
+      
+      <!-- Video cameras -->
 			<div data-image="gui/cameras/vidcam.png" data-x="15" data-y="15" class="MapButton" 
 				id="royVidButton" data-facing="90" data-hold-content="roy_rogers" data-enables="">
 			</div>
+      
 			<script type="text/javascript">
 				$(document).ready(function(){
 						var map = new Map($('div.Map').first());
 						});
-</script>
+      </script>
   </div>
   <div class="hidden_content" id="page1">
 	  The gatepost and the trees are just about all that's left of the world of 106 Pennywell Road where I lived and played.  The gatepost still stands, still bears the faint traces of the painted number.  The maples are bigger than they were fifty years ago but still recognizable.  The two trees nearest the gatepost were the easiest to climb.  My friend and I spent many hours sitting in them, nattering away to each other.
@@ -97,58 +129,89 @@
 	  <p>My brother and I broke all the rules one day when we were very small and made highly satisfactory mud pies out of the black, oil-soaked dirt of that yard, using oil to mix them instead of trudging all the way upstairs for water as we perfectly well knew we were supposed to do.  I remember to this day the luxuriousness of that gushing tap right on hand and the shininess of the mud thus produced.  We were probably pretty shiny too, and nemesis was swift and severe once our mother spotted us.  We climbed onto the roof of the oilhouse sometimes, but that was mostly just for sitting.</p>
   </div>
 
+  <!-- AUDIO VOICE -->
   <div class="hidden_content" id="page1Audio">
 	  <audio>
-	  <source src="content/audio/one.ogg" type="audio/ogg" controls="true"></source>
+      <source src="content/audio/one.ogg" type="audio/ogg" controls="true"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page2Audio">
 	  <audio>
-	  <source src="content/audio/two.ogg" type="audio/ogg"></source>
+      <source src="content/audio/two.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page3Audio">
 	  <audio>
-	  <source src="content/audio/three.ogg" type="audio/ogg"></source>
+      <source src="content/audio/three.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page4Audio">
 	  <audio>
-	  <source src="content/audio/four.ogg" type="audio/ogg"></source>
+      <source src="content/audio/four.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page5Audio">
 	  <audio>
-	  <source src="content/audio/five.ogg" type="audio/ogg"></source>
+      <source src="content/audio/five.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page6Audio">
 	  <audio>
-	  <source src="content/audio/six.ogg" type="audio/ogg"></source>
+      <source src="content/audio/six.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page7Audio">
 	  <audio>
-	  <source src="content/audio/seven.ogg" type="audio/ogg"></source>
+      <source src="content/audio/seven.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page8Audio">
 	  <audio>
-	  <source src="content/audio/eight.ogg" type="audio/ogg"></source>
+      <source src="content/audio/eight.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page9Audio">
 	  <audio>
-	  <source src="content/audio/nine.ogg" type="audio/ogg"></source>
+      <source src="content/audio/nine.ogg" type="audio/ogg"></source>
 	  </audio>
   </div>
-  <div class="hidden_content" id="yard_house">
-	  <img src="content/image/yard_house.png"  height="90%" alt="The yard from the house.">
+  
+  <!-- PHOTOS -->
+  <div class="hidden_content" id="bedroom_yard_photo">
+	  <img src="content/image/bedroom_yard.png" height="90%"
+         alt="The bedroom view of the yard.">
   </div>
+  <div class="hidden_content" id="hill_yard_photo">
+	  <img src="content/image/hill_yard.png" height="90%"
+         alt="The yard from the hill.">
+  </div>
+  <div class="hidden_content" id="old_house_photo">
+	  <img src="content/image/old_house.png" height="90%"
+         alt="The original house.">
+  </div>
+  <div class="hidden_content" id="summer_tree_photo">
+	  <img src="content/image/summer_tree.png" height="90%"
+         alt="Mother's photo of the tree.">
+  </div>
+  <div class="hidden_content" id="window_yard_photo">
+	  <img src="content/image/window_yard.png" height="90%"
+         alt="The yard from bedroom window.">
+  </div>
+  <div class="hidden_content" id="winter_tree_photo">
+	  <img src="content/image/winter_tree.png" height="90%"
+         alt="Photo of one of the trees in winter time from the house.">
+  </div>
+  <div class="hidden_content" id="yard_house_photo">
+	  <img src="content/image/yard_house.png" height="90%"
+         alt="The yard from the house.">
+  </div>
+  
+  <!-- VIDEO -->
   <div class="hidden_content" id="roy_rogers">
 	  <video>
-	  <source src="content/video/video1.ogv" type="video/ogg" />
-	  <source src="content/video/video1.m4v" type="video/m4v" /> 
+      <source src="content/video/video1.ogv" type="video/ogg" />
+      <source src="content/video/video1.m4v" type="video/m4v" />
+      <source src="content/video/video1.mp4" type="video/mp4" /> 
 	  </video>
   </div>
 </body>
