@@ -29,7 +29,7 @@ function MapElement(element,done)
     
     element.prepend(this.image);
     element.css({margin:"0px",padding:"0px"});
-}
+    }
 
 // set position of element - to be called by the map in order to place
 // correctly relative to size.

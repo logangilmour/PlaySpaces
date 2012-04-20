@@ -14,15 +14,24 @@ function Map(element){
     this.element=element
     var map = this;
     ImageElement.call(this,element.data('image'),function(index){map.init();});
-    element.width("100%");
-    element.prepend(this.image);
-    this.image.width("100%");
-    element.css({position:"relative"});
+    
+
 }
 
 Map.prototype.init = function()
 {
     var map = this;
+    this.element.width("100%");
+    this.element.prepend(this.image);
+    this.image.width("100%");
+    this.element.css({position:"relative"});
+    var prevent = function(event){
+        if(event.preventDefault){
+            event.preventDefault();
+        }
+        };
+    this.element.on("touchstart",prevent);
+    this.element.on("mousedown",prevent);
 
     this.element.children('div.MapElement').each(function(index) {
       var element = new MapElement($(this),
