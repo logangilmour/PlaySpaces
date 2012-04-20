@@ -68,4 +68,8 @@ function diagonal(rect){
 
 MapCam.prototype.hideMedia = function(){
 	$("#overlay").fadeOut(500);
+    $("#overlay").find("video").each(function(){
+        this.stop();
+        });
+
 }
