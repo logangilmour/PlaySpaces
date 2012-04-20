@@ -44,8 +44,10 @@ MapCam.prototype.showMedia = function (){
     var overlay = $("#overlay").first();
     overlay.html(content.clone(true));
     overlay.fadeIn(500);
+    
   
 	if(content.is('video')){
+		alert("got here");
 		content[0].play();
 	}
 }

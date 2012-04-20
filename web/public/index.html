@@ -13,6 +13,7 @@
 		<script type="text/javascript" src="Map.js"></script>
 	</head>
 	<body>
+<<<<<<< HEAD
 		<div id="content_box">
 			<div id="content_holder"> 
 				<div id="content_text"></div>
@@ -21,6 +22,18 @@
 
 			<div id="overlay" width="100%" height="100%"></div>
 		</div>
+=======
+    <img id = "startup" src="content/image/background-scaled.png" width="100%" height="100%"
+        style="z-index:1000">
+        <div id="content_box">
+       <div id="content_holder"> 
+            <div id="content_text"></div>
+      
+      </div> 
+       
+        <div id="overlay" width="100%" height="100%"></div>
+       </div>
+>>>>>>> 026c831873e50abb66c6300b91adfc44304b52b0
 		<div data-image="content/image/background-cropped.png" data-x-off="720" data-y-off="1502" class="Map">
 			<!-- dots and map elements -->
 
@@ -120,12 +133,6 @@
 			<div data-image="gui/cameras/vidcam.png" data-x="1400" data-y="1553" class="MapCam" 
 				id="royVidButton" data-facing="90" data-hold-content="roy_rogers" data-enables="">
 			</div>
-
-			<script type="text/javascript">
-				$(document).ready(function(){
-						var map = new Map($('div.Map').first());
-						});
-</script>
   </div>
   <div class="hidden_content" id="page1">
 	  The gatepost and the trees are just about all that's left of the world of 106 Pennywell Road where I lived and played.  The gatepost still stands, still bears the faint traces of the painted number.  The maples are bigger than they were fifty years ago but still recognizable.  The two trees nearest the gatepost were the easiest to climb.  My friend and I spent many hours sitting in them, nattering away to each other.
@@ -262,5 +269,17 @@
 	  <source src="content/video/video1.mp4" type="video/mp4" /> 
 	  </video>
   </div>
+ 
+			<script type="text/javascript">
+				$(document).ready(function(){
+						var dis= function(){
+                            $("#startup").fadeOut(2000);
+						};
+                        $("#startup").on("mousedown",dis);
+                        $("#startup").on("touchstart",dis);
+
+                        var map = new Map($('div.Map').first());
+                    });
+      </script>
 </body>
 </html>
