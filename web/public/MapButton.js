@@ -5,7 +5,7 @@
  * isPermanent 
  */
 
-//MapButton.prototype = MapElement.prototype;
+MapButton.prototype = MapElement.prototype;
 function MapButton(image, done, contentId, holdContentId, isDot)
 {
 	MapElement.call(this,image, done);
@@ -15,7 +15,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
             
         });
     
- //   var that = this;
+    var that = this;
 	that.content = contentId;
     that.setHoldContent = function(content)
 	{
@@ -99,6 +99,7 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 
 MapButton.prototype.off = function(){
     this.image.detach();
+    this.offImage.css({width:"100%"});
     this.element.prepend(this.offImage);
 }
 /**
