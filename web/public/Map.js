@@ -13,16 +13,27 @@ Map.prototype = ImageElement.prototype;
 function Map(element){
     this.element=element
     var map = this;
+    this.xOff = element.data('x-off');
+    this.yOff = element.data('y-off');
     ImageElement.call(this,element.data('image'),function(index){map.init();});
-    element.width("100%");
-    element.prepend(this.image);
-    this.image.width("100%");
-    element.css({position:"relative"});
+    
+
 }
 
 Map.prototype.init = function()
 {
     var map = this;
+    this.element.width("100%");
+    this.element.prepend(this.image);
+    this.image.width("100%");
+    this.element.css({position:"relative"});
+    var prevent = function(event){
+        if(event.preventDefault){
+            event.preventDefault();
+        }
+        };
+    this.element.on("touchstart",prevent);
+    this.element.on("mousedown",prevent);
 
     this.element.children('div.MapElement').each(function(index) {
       var element = new MapElement($(this),
@@ -45,7 +56,17 @@ Map.prototype.init = function()
     });
 }
 Map.prototype.add = function(element){
-   //moar eventbus
-   var calc = element.width/this.width*100;
-   element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
+    //moar eventbus
+   // var calc = element.width/this.width*100;
+   //element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
+   var width = element.width/this.width*100;
+   var x = this.scaleH(element.rawX)
+   var y = this.scaleV(element.rawY)
+   element.setPos(x+"%",y+"%",width+"%");
+}
+Map.prototype.scaleH = function(val){
+    return (val-this.xOff)/this.width*100;
+}
+Map.prototype.scaleV = function(val){
+    return (val-this.yOff)/this.height*100;
 }

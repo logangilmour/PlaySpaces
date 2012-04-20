@@ -4,14 +4,23 @@
  * Pressables can have content that appears/plays only when held added to them.
  * isPermanent 
  */
+
+//MapButton.prototype = MapElement.prototype;
 function MapButton(image, done, contentId, holdContentId, isDot)
 {
-	var that = new MapElement(image, done);
+	MapElement.call(this,image, done);
+    this.offImage = $("<img/>")
+        .attr("src","gui/dot_off.png")
+        .load(function() {
+            
+        });
+    
+ //   var that = this;
 	that.content = contentId;
-	that.setHoldContent = function(content)
+    that.setHoldContent = function(content)
 	{
 		this.holdContent = content;
-	}
+	};
 
 	var contentBox = $("#content_box");
 	this.content="content1";
@@ -19,15 +28,18 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
 	var holdContent = holdContentId? $("#" + holdContentId) : null;
-
 	var buttonClick = function(event)
 	{
 
-		// stops playback of any and all audio recorings
-		$(".hidden_content").each(function(){
-				stopAutoplay($(this));
-				});
+    // stops playback of any and all audio recorings
+    $(".hidden_content").each(function(){
+          try{
+           stopAutoplay($(this));
+           }catch(exception){
 
+           }
+			}); 
+                
 		// prevents the dragging of map buttons
 		if(event.preventDefault){
 			event.preventDefault();
@@ -36,55 +48,59 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 		if(contentId) {
 			contentBox.html($("#" + contentId).html());
 		}
-
-		if(holdContentId){
+	try{	
+        if(holdContentId){
 			origContent = contentBox.html();
 			showMedia(holdContent, that);
 			startAutoplay(holdContent);
 		}
+    }catch(ex){
+        //alert("Bad stuff: "+ex);
+    }
+
+    // change state when touched
+            if(isDot){
+           that.off();
+           }
+            
+        
+	    var enableList = $(this).data("enables");
+		if (enableList && enableList.length > 0){
+			var enable = enableList.split(",");
+			for (var i = 0; i < enable.length; i++){
+				$("#" + enable[i].trim()).fadeIn(2000);
+			}
+		}
+
+
 	};
 
 	var buttonRelease = function(event)
 	{
-
 		if (event.preventDefault){
 			event.preventDefault();
 		}
-
-		// change state when touched
-		if(isDot){
-			that.element.data('image', 'gui/dot_off.png');
-			that.setImage(that.element.data('image'));	
-		}
-
-		if(holdContentId){
-			stopAutoplay($("#" + holdContentId));
-			hideMedia();
-			contentBox.html(origContent);
-		}
-
-		// loops through buttons data-enables attribute and makes visible
-		// every element in the list
-		var enableList = $(this).data("enables");
-		alert("just outside if");
-		if (enableList && enableList.length > 0){
-			alert("inside the if");
-			var enable = enableList.split(",");
-			for (var i = 0; i < enable.length; i++){
-				alert("inside the for");
-				$("#" + enable[i].trim()).css("display", "block");
-			}
-		}
+        try {
+            if(holdContentId){
+                stopAutoplay($("#" + holdContentId));
+                hideMedia();
+                contentBox.html(origContent);
+            }
+        }catch(ex){
+        }
 	};
 
 	that.element.on("mousedown", buttonClick);
-	that.element.on("mouseup", buttonRelease);
+	$(document.body).on("mouseup", buttonRelease);
 	that.element.on("touchstart", buttonClick);
-	that.element.on("touchend", buttonRelease);
-
+	$(document.body).on("touchend", buttonRelease);
 	return that;
 }
 
+MapButton.prototype.off = function(){
+    this.image.detach();
+    this.element.prepend(this.offImage);
+}
 /**
  * Builds an overlay div that will house the media
  */
@@ -161,19 +177,22 @@ function startAutoplay(content){
 	var audioElement = content.find("audio")[0];
 
 	if(audioElement){
+        try{
 		audioElement.play();
+        }catch(ex){
+            Window.alert(ex);
+        }
 	}
 
 	return content;
 }
 
 function stopAutoplay(content){
-	var audioElement = content.find("audio")[0];
-
-	if(audioElement){
-		audioElement.currentTime = 0;
-		audioElement.pause();
-	}
-
+    
+        var audioElement = content.find("audio")[0];
+        if(audioElement){
+            audioElement.currentTime = 0;
+            audioElement.pause();
+        }
 	return content;
 }
