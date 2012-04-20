@@ -39,6 +39,7 @@ function MapDot(element, done){
 					startAutoplay($("#"+holdContentId));
 				}
 			}catch(ex){
+				alert("Can't: "+ex);
 			}
 
 			// change state when touched
