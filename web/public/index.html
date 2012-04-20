@@ -13,41 +13,42 @@
 		<script type="text/javascript" src="Map.js"></script>
 	</head>
 	<body>
-        <div id="content_box">
-       <div id="content_holder"> 
-            <div id="content_text"></div>
-      
-      </div> 
-       
-        <div id="overlay" width="100%" height="100%"></div>
-       </div>
+		<div id="content_box">
+			<div id="content_holder"> 
+				<div id="content_text"></div>
+
+			</div> 
+
+			<div id="overlay" width="100%" height="100%"></div>
+		</div>
 		<div data-image="content/image/background-cropped.png" data-x-off="720" data-y-off="1502" class="Map">
-      <!-- dots and map elements -->
-			           
-       <div id="image2" class="MapElement" data-image="gui/garden_playhouse.png" data-x="1126" data-y="1603" > 
-			</div>
-<div id="image3" class="MapElement" data-image="gui/flowers.png" data-x="1137" data-y="1650" > </div>
-<div id="image1" class="MapElement" data-image="gui/driveway.png" data-x="876" data-y="1576"></div>
+			<!-- dots and map elements -->
 
-<div id="image4" class="MapElement" data-image="gui/thistle_yard.png" data-x="1140" data-y="1590" > 
+			<div id="image2" class="MapElement" data-image="gui/garden_playhouse.png" data-x="1126" data-y="1603" > 
 			</div>
-<div id="image5" class="MapElement" data-image="gui/hill.png" data-x="627" data-y="1502"> 
+			<div id="image3" class="MapElement" data-image="gui/flowers.png" data-x="1137" data-y="1650" > </div>
+			<div id="image1" class="MapElement" data-image="gui/driveway.png" data-x="876" data-y="1576"></div>
+
+			<div id="image4" class="MapElement" data-image="gui/thistle_yard.png" data-x="1140" data-y="1590" > 
 			</div>
-<div id="image6" class="MapElement" data-image="gui/bleachers.png" data-x="890" data-y="1552" > 
+			<div id="image5" class="MapElement" data-image="gui/hill.png" data-x="627" data-y="1502"> 
 			</div>
-<div id="image7" class="MapElement" data-image="gui/tennis_court.png" data-x="770" data-y="1710" > 
+			<div id="image6" class="MapElement" data-image="gui/bleachers.png" data-x="890" data-y="1552" > 
 			</div>
-<div id="image8" class="MapElement" data-image="gui/dressing_room.png" data-x="781" data-y="1861" > 
+			<div id="image7" class="MapElement" data-image="gui/tennis_court.png" data-x="770" data-y="1710" > 
+			</div>
+			<div id="image8" class="MapElement" data-image="gui/dressing_room.png" data-x="781" data-y="1861" > 
 			</div>
 
-<div id="image9" class="MapElement" data-image="gui/house.png" data-x="1018" data-y="1644" > 
+			<div id="image9" class="MapElement" data-image="gui/house.png" data-x="1018" data-y="1644" > 
 			</div>
- 
+
 			<div data-image="gui/dot_on.png" data-x="1156" data-y="1850" class="MapDot" 
 				id="button1" data-content="page1" data-hold-content="page1Audio"
 				data-enables="button2, image1">
 			</div>
- 
+
+			<!--Map Dots -->
 			<div data-image="gui/dot_on.png" data-x="1212" data-y="1764" class="MapDot" 
 				id="button2" data-content="page2" data-hold-content="page2Audio"
 				data-enables="image2, button3">
@@ -79,51 +80,52 @@
 			<div data-image="gui/dot_on.png" data-x="1148" data-y="1722" class="MapDot" 
 				id="button9" data-content="page9" data-hold-content="page9Audio"
 				data-enables="image9, camera1, royVidButton, camera1, camera2, camera3,
-                        camera4, camera5, camera6, camera7">
+				camera4, camera5, camera6, camera7">
 			</div>
-      
-      <!-- Photo Cameras -->
-      <div data-image="gui/cameras/camera.png" data-x="1087" data-y="1705"
+
+			<!-- Photo Cameras -->
+			<div data-image="gui/cameras/camera.png" data-x="1087" data-y="1705"
 				class="MapCam" id="camera1" data-hold-content="bedroom_yard_photo"
 				data-facing="85">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="1263" data-y="1591"
+			<div data-image="gui/cameras/camera.png" data-x="1263" data-y="1591"
 				class="MapCam" id="camera2" data-hold-content="hill_yard_photo"
 				data-facing="167">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="983" data-y="1864"				class="MapCam" id="camera3" data-hold-content="old_house_photo"
+			<div data-image="gui/cameras/camera.png" data-x="983" data-y="1864"				
+				class="MapCam" id="camera3" data-hold-content="old_house_photo"
 				data-facing="22">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="991" data-y="1699"
+			<div data-image="gui/cameras/camera.png" data-x="991" data-y="1699"
 				class="MapCam" id="camera4" data-hold-content="summer_tree_photo"
 				data-facing="278">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="1081" data-y="1646"
+			<div data-image="gui/cameras/camera.png" data-x="1081" data-y="1646"
 				class="MapCam" id="camera5" data-hold-content="window_yard_photo"
 				data-facing="116">
 			</div>
-<!-- this doesn't really work unless we can sort out the multi-fade thing.
+			<!-- this doesn't really work unless we can sort out the multi-fade thing.
 
-     <div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
+			<div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
 				class="MapCam" id="camera6" data-hold-content="winter_tree_photo"
 				data-facing="278">
 			</div>
--->
-      <div data-image="gui/cameras/camera.png" data-x="1247" data-y="1718"
+			-->
+			<div data-image="gui/cameras/camera.png" data-x="1247" data-y="1718"
 				class="MapCam" id="camera7" data-hold-content="yard_house_photo"
 				data-facing="269">
 			</div>
-      
-      <!-- Video cameras -->
+
+			<!-- Video cameras -->
 			<div data-image="gui/cameras/vidcam.png" data-x="1400" data-y="1553" class="MapCam" 
 				id="royVidButton" data-facing="90" data-hold-content="roy_rogers" data-enables="">
 			</div>
-      
+
 			<script type="text/javascript">
 				$(document).ready(function(){
 						var map = new Map($('div.Map').first());
 						});
-      </script>
+</script>
   </div>
   <div class="hidden_content" id="page1">
 	  The gatepost and the trees are just about all that's left of the world of 106 Pennywell Road where I lived and played.  The gatepost still stands, still bears the faint traces of the painted number.  The maples are bigger than they were fifty years ago but still recognizable.  The two trees nearest the gatepost were the easiest to climb.  My friend and I spent many hours sitting in them, nattering away to each other.
@@ -159,96 +161,105 @@
 
   <!-- AUDIO VOICE -->
   <div class="hidden_content" id="page1Audio">
-	  <audio preload="auto">
-      <source src="content/audio/one.ogg" type="audio/ogg" controls="true"></source>
-      <source src="content/audio/one.mp3" type="audio/mp3" controls="true"></source>
+	  <audio preload="auto|metadata|none">
+	  <source src="content/audio/one.ogg" type="audio/ogg" ></source>
+	  <source src="content/audio/one.mp3" type="audio/mp3" ></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page2Audio">
 	  <audio preload="auto">
-      <source src="content/audio/two.ogg" type="audio/ogg"></source>
-      <source src="content/audio/two.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/two.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/two.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page3Audio">
 	  <audio preload="auto">
-      <source src="content/audio/three.ogg" type="audio/ogg"></source>
-      <source src="content/audio/three.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/three.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/three.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page4Audio">
 	  <audio preload="auto">
-      <source src="content/audio/four.ogg" type="audio/ogg"></source>
-      <source src="content/audio/four.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/four.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/four.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page5Audio">
 	  <audio preload="auto">
-      <source src="content/audio/five.ogg" type="audio/ogg"></source>
-      <source src="content/audio/five.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/five.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/five.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page6Audio">
 	  <audio preload="auto">
-      <source src="content/audio/six.ogg" type="audio/ogg"></source>
-      <source src="content/audio/six.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/six.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/six.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page7Audio">
 	  <audio preload="auto">
-      <source src="content/audio/seven.ogg" type="audio/ogg"></source>
-      <source src="content/audio/seven.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/seven.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/seven.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page8Audio">
 	  <audio preload="auto">
-      <source src="content/audio/eight.ogg" type="audio/ogg"></source>
-      <source src="content/audio/eight.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/eight.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/eight.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
   <div class="hidden_content" id="page9Audio">
 	  <audio preload="auto">
-      <source src="content/audio/nine.ogg" type="audio/ogg"></source>
-      <source src="content/audio/nine.mp3" type="audio/mp3"></source>
+	  <source src="content/audio/nine.ogg" type="audio/ogg"></source>
+	  <source src="content/audio/nine.mp3" type="audio/mp3"></source>
+	  Your browser does not support audio
 	  </audio>
   </div>
-  
+
   <!-- PHOTOS -->
   <div class="hidden_content" id="bedroom_yard_photo">
 	  <img src="content/image/bedroom_yard.png" height="90%"
-         alt="The bedroom view of the yard.">
+	  alt="The bedroom view of the yard.">
   </div>
   <div class="hidden_content" id="hill_yard_photo">
 	  <img src="content/image/hill_yard.png" height="90%"
-         alt="The yard from the hill.">
+	  alt="The yard from the hill.">
   </div>
   <div class="hidden_content" id="old_house_photo">
 	  <img src="content/image/old_house.png" height="90%"
-         alt="The original house.">
+	  alt="The original house.">
   </div>
   <div class="hidden_content" id="summer_tree_photo">
 	  <img src="content/image/summer_tree.png" height="90%"
-         alt="Mother's photo of the tree.">
+	  alt="Mother's photo of the tree.">
   </div>
   <div class="hidden_content" id="window_yard_photo">
 	  <img src="content/image/window_yard.png" height="90%"
-         alt="The yard from bedroom window.">
+	  alt="The yard from bedroom window.">
   </div>
   <div class="hidden_content" id="winter_tree_photo">
 	  <img src="content/image/winter_tree.png" height="90%"
-         alt="Photo of one of the trees in winter time from the house.">
+	  alt="Photo of one of the trees in winter time from the house.">
   </div>
   <div class="hidden_content" id="yard_house_photo">
 	  <img src="content/image/yard_house.png" height="90%"
-         alt="The yard from the house.">
+	  alt="The yard from the house.">
   </div>
-  
+
   <!-- VIDEO -->
   <div class="hidden_content" id="roy_rogers">
 	  <video>
-      <source src="content/video/video1.ogv" type="video/ogg" />
-      <source src="content/video/video1.m4v" type="video/m4v" /> 
-      <source src="content/video/video1.mp4" type="video/mp4" /> 
+	  <source src="content/video/video1.ogv" type="video/ogg" />
+	  <source src="content/video/video1.m4v" type="video/m4v" /> 
+	  <source src="content/video/video1.mp4" type="video/mp4" /> 
 	  </video>
   </div>
 </body>
