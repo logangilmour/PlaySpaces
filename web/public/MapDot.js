@@ -12,17 +12,9 @@ function MapDot(element, done){
         });
     
 	this.content = contentId;
-    this.setHoldContent = function(content)
-	{
-		this.holdContent = content;
-	};
 
-	var contentBox = $("#content_box");
-	this.content="content1";
+	var contentBox = $("#content_text");
 
-	// Set up mouse handlers to switch the content box to the content.
-	var origContent;
-	var holdContent = holdContentId? $("#" + holdContentId) : null;
     var me = this;	
     this.addPressHandler(function(event)
 	{
@@ -45,7 +37,6 @@ function MapDot(element, done){
 		}
 	try{	
         if(holdContentId){
-			origContent = contentBox.html();
 			startAutoplay(holdContent);
 		}
     }catch(ex){
@@ -75,7 +66,6 @@ function MapDot(element, done){
         try {
             if(holdContentId){
                 stopAutoplay($("#" + holdContentId));
-                contentBox.html(origContent);
             }
         }catch(ex){
         }

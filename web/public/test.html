@@ -13,9 +13,15 @@
 		<script type="text/javascript" src="Map.js"></script>
 	</head>
 	<body>
-		<div id="padding_box"></div>
-		<div id="content_box"></div>
-		<div data-image="content/image/background-cropped.png" data-x-off="720" data-y-off="975" class="Map">
+        <div id="content_box">
+       <div id="content_holder"> 
+            <div id="content_text"></div>
+      
+      </div> 
+       
+        <div id="overlay" width="100%" height="100%"></div>
+       </div>
+		<div data-image="content/image/background-cropped.png" data-x-off="720" data-y-off="1502" class="Map">
       <!-- dots and map elements -->
 			           
        <div id="image2" class="MapElement" data-image="gui/garden_playhouse.png" data-x="1126" data-y="1603" > 
@@ -25,7 +31,7 @@
 
 <div id="image4" class="MapElement" data-image="gui/thistle_yard.png" data-x="1140" data-y="1590" > 
 			</div>
-<div id="image5" class="MapElement" data-image="gui/hill.png" data-x="627" data-y="1422"> 
+<div id="image5" class="MapElement" data-image="gui/hill.png" data-x="627" data-y="1502"> 
 			</div>
 <div id="image6" class="MapElement" data-image="gui/bleachers.png" data-x="890" data-y="1552" > 
 			</div>
@@ -77,37 +83,39 @@
 			</div>
       
       <!-- Photo Cameras -->
-      <div data-image="gui/cameras/camera.png" data-x="5" data-y="20"
+      <div data-image="gui/cameras/camera.png" data-x="1087" data-y="1705"
 				class="MapCam" id="camera1" data-hold-content="bedroom_yard_photo"
 				data-facing="85">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="15" data-y="20"
+      <div data-image="gui/cameras/camera.png" data-x="1263" data-y="1591"
 				class="MapCam" id="camera2" data-hold-content="hill_yard_photo"
 				data-facing="167">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="25" data-y="20"
-				class="MapCam" id="camera3" data-hold-content="old_house_photo"
+      <div data-image="gui/cameras/camera.png" data-x="983" data-y="1864"				class="MapCam" id="camera3" data-hold-content="old_house_photo"
 				data-facing="22">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="35" data-y="20"
+      <div data-image="gui/cameras/camera.png" data-x="991" data-y="1699"
 				class="MapCam" id="camera4" data-hold-content="summer_tree_photo"
 				data-facing="278">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="45" data-y="20"
+      <div data-image="gui/cameras/camera.png" data-x="1081" data-y="1646"
 				class="MapCam" id="camera5" data-hold-content="window_yard_photo"
 				data-facing="116">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
+<!-- this doesn't really work unless we can sort out the multi-fade thing.
+
+     <div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
 				class="MapCam" id="camera6" data-hold-content="winter_tree_photo"
 				data-facing="278">
 			</div>
-      <div data-image="gui/cameras/camera.png" data-x="65" data-y="20"
+-->
+      <div data-image="gui/cameras/camera.png" data-x="1247" data-y="1718"
 				class="MapCam" id="camera7" data-hold-content="yard_house_photo"
 				data-facing="269">
 			</div>
       
       <!-- Video cameras -->
-			<div data-image="gui/cameras/vidcam.png" data-x="15" data-y="15" class="MapCam" 
+			<div data-image="gui/cameras/vidcam.png" data-x="1400" data-y="1553" class="MapCam" 
 				id="royVidButton" data-facing="90" data-hold-content="roy_rogers" data-enables="">
 			</div>
       
@@ -151,55 +159,55 @@
 
   <!-- AUDIO VOICE -->
   <div class="hidden_content" id="page1Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/one.ogg" type="audio/ogg" controls="true"></source>
       <source src="content/audio/one.mp3" type="audio/mp3" controls="true"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page2Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/two.ogg" type="audio/ogg"></source>
       <source src="content/audio/two.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page3Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/three.ogg" type="audio/ogg"></source>
       <source src="content/audio/three.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page4Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/four.ogg" type="audio/ogg"></source>
       <source src="content/audio/four.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page5Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/five.ogg" type="audio/ogg"></source>
       <source src="content/audio/five.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page6Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/six.ogg" type="audio/ogg"></source>
       <source src="content/audio/six.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page7Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/seven.ogg" type="audio/ogg"></source>
       <source src="content/audio/seven.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page8Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/eight.ogg" type="audio/ogg"></source>
       <source src="content/audio/eight.mp3" type="audio/mp3"></source>
 	  </audio>
   </div>
   <div class="hidden_content" id="page9Audio">
-	  <audio>
+	  <audio preload="auto">
       <source src="content/audio/nine.ogg" type="audio/ogg"></source>
       <source src="content/audio/nine.mp3" type="audio/mp3"></source>
 	  </audio>
