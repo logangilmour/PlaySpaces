@@ -19,7 +19,7 @@ div {
 	-webkit-user-drag: none;
 }
 
-.hidden_content, .MapButton, .MapElement, .MapDot 
+.hidden_content, .MapButton, .MapElement, .MapDot, .MapCam 
 {
 	display: none;
 }
