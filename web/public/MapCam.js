@@ -40,18 +40,16 @@ function MapCam(element, done){
 MapCam.prototype.showMedia = function (){
 	
     var content =$("#"+$(this.element).data('hold-content'))
-        .find("img,video").first();
+        .find("img,video").first().clone(true);
     var overlay = $("#overlay").first();
-    overlay.html(content.clone(true));
+    overlay.html(content);
     overlay.fadeIn(500);
     
   
 	if(content.is('video')){
-		alert("got here");
-		content[0].play();
-	}
+        content[0].play();
+    }
 }
-
 /**
  * Computes the diagonal of a rectanglular JQuery element
  */
