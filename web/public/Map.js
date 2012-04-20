@@ -13,6 +13,8 @@ Map.prototype = ImageElement.prototype;
 function Map(element){
     this.element=element
     var map = this;
+    this.xOff = element.data('x-off');
+    this.yOff = element.data('y-off');
     ImageElement.call(this,element.data('image'),function(index){map.init();});
     
 
@@ -54,7 +56,17 @@ Map.prototype.init = function()
     });
 }
 Map.prototype.add = function(element){
-   //moar eventbus
-   var calc = element.width/this.width*100;
-   element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
+    //moar eventbus
+   // var calc = element.width/this.width*100;
+   //element.setPos(element.rawX+"%",element.rawY+"%",calc+"%");
+   var width = element.width/this.width*100;
+   var x = this.scaleH(element.rawX)
+   var y = this.scaleV(element.rawY)
+   element.setPos(x+"%",y+"%",width+"%");
+}
+Map.prototype.scaleH = function(val){
+    return (val-this.xOff)/this.width*100;
+}
+Map.prototype.scaleV = function(val){
+    return (val-this.yOff)/this.height*100;
 }

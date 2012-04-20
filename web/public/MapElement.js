@@ -10,7 +10,7 @@ Requires jQuery
 MapElement.prototype = ImageElement.prototype;
 function MapElement(element,done)
 {
-    ImageElement.call(this, element.data('image'),done);
+    var that = new ImageElement(element.data('image'),done);
     this.element = element;
     this.rawX=element.data('x'); // These values are used by the map to figure out where the element
     this.rawY=element.data('y'); // should actually be placed according to size.
@@ -28,7 +28,6 @@ function MapElement(element,done)
     }
     
     element.prepend(this.image);
-    element.css({margin:"0px",padding:"0px"});
     }
 
 // set position of element - to be called by the map in order to place

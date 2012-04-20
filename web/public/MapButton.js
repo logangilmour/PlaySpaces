@@ -4,14 +4,23 @@
  * Pressables can have content that appears/plays only when held added to them.
  * isPermanent 
  */
+
+//MapButton.prototype = MapElement.prototype;
 function MapButton(image, done, contentId, holdContentId, isDot)
 {
-	var that = new MapElement(image, done);
+	MapElement.call(this,image, done);
+    this.offImage = $("<img/>")
+        .attr("src","gui/dot_off.png")
+        .load(function() {
+            
+        });
+    
+ //   var that = this;
 	that.content = contentId;
     that.setHoldContent = function(content)
 	{
 		this.holdContent = content;
-	}
+	};
 
 	var contentBox = $("#content_box");
 	this.content="content1";
@@ -19,7 +28,6 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	// Set up mouse handlers to switch the content box to the content.
 	var origContent;
 	var holdContent = holdContentId? $("#" + holdContentId) : null;
-
 	var buttonClick = function(event)
 	{
 
@@ -52,15 +60,15 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 
     // change state when touched
             if(isDot){
-                that.element.data('image', 'gui/dot_off.png');
-                that.setImage(that.element.data('image'));	
-            }
+           that.off();
+           }
+            
         
 	    var enableList = $(this).data("enables");
 		if (enableList && enableList.length > 0){
 			var enable = enableList.split(",");
 			for (var i = 0; i < enable.length; i++){
-				$("#" + enable[i].trim()).css("display", "block");
+				$("#" + enable[i].trim()).fadeIn(2000);
 			}
 		}
 
@@ -89,6 +97,10 @@ function MapButton(image, done, contentId, holdContentId, isDot)
 	return that;
 }
 
+MapButton.prototype.off = function(){
+    this.image.detach();
+    this.element.prepend(this.offImage);
+}
 /**
  * Builds an overlay div that will house the media
  */
