@@ -8,6 +8,8 @@
 		<script type="text/javascript" src="ImageElement.js"></script>
 		<script type="text/javascript" src="MapElement.js"></script>
 		<script type="text/javascript" src="MapButton.js"></script>
+		<script type="text/javascript" src="MapDot.js"></script>
+		<script type="text/javascript" src="MapCam.js"></script>
 		<script type="text/javascript" src="Map.js"></script>
 	</head>
 	<body>
@@ -37,8 +39,7 @@
  
 			<div data-image="gui/dot_on.png" data-x="1156" data-y="1850" class="MapDot" 
 				id="button1" data-content="page1" data-hold-content="page1Audio"
-				data-enables="button2, image1, royVidButton, camera1, camera2, camera3,
-                        camera4, camera5, camera6, camera7">
+				data-enables="button2, image1">
 			</div>
  
 			<div data-image="gui/dot_on.png" data-x="1212" data-y="1764" class="MapDot" 
@@ -71,41 +72,42 @@
 			</div>
 			<div data-image="gui/dot_on.png" data-x="1148" data-y="1722" class="MapDot" 
 				id="button9" data-content="page9" data-hold-content="page9Audio"
-				data-enables="image9, camera1,royVidButton">
+				data-enables="image9, camera1, royVidButton, camera1, camera2, camera3,
+                        camera4, camera5, camera6, camera7">
 			</div>
       
       <!-- Photo Cameras -->
       <div data-image="gui/cameras/camera.png" data-x="5" data-y="20"
-				class="MapButton" id="camera1" data-hold-content="bedroom_yard_photo"
+				class="MapCam" id="camera1" data-hold-content="bedroom_yard_photo"
 				data-facing="85">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="15" data-y="20"
-				class="MapButton" id="camera2" data-hold-content="hill_yard_photo"
+				class="MapCam" id="camera2" data-hold-content="hill_yard_photo"
 				data-facing="167">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="25" data-y="20"
-				class="MapButton" id="camera3" data-hold-content="old_house_photo"
+				class="MapCam" id="camera3" data-hold-content="old_house_photo"
 				data-facing="22">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="35" data-y="20"
-				class="MapButton" id="camera4" data-hold-content="summer_tree_photo"
+				class="MapCam" id="camera4" data-hold-content="summer_tree_photo"
 				data-facing="278">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="45" data-y="20"
-				class="MapButton" id="camera5" data-hold-content="window_yard_photo"
+				class="MapCam" id="camera5" data-hold-content="window_yard_photo"
 				data-facing="116">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="55" data-y="20"
-				class="MapButton" id="camera6" data-hold-content="winter_tree_photo"
+				class="MapCam" id="camera6" data-hold-content="winter_tree_photo"
 				data-facing="278">
 			</div>
       <div data-image="gui/cameras/camera.png" data-x="65" data-y="20"
-				class="MapButton" id="camera7" data-hold-content="yard_house_photo"
+				class="MapCam" id="camera7" data-hold-content="yard_house_photo"
 				data-facing="269">
 			</div>
       
       <!-- Video cameras -->
-			<div data-image="gui/cameras/vidcam.png" data-x="15" data-y="15" class="MapButton" 
+			<div data-image="gui/cameras/vidcam.png" data-x="15" data-y="15" class="MapCam" 
 				id="royVidButton" data-facing="90" data-hold-content="roy_rogers" data-enables="">
 			</div>
       
