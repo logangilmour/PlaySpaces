@@ -9,7 +9,6 @@
 
 
 Map.prototype = ImageElement.prototype;
-
 function Map(element){
     this.element=element
     var map = this;
@@ -40,19 +39,14 @@ Map.prototype.init = function()
                                    function(index){map.add(element);});
     });
     
-    this.element.children('div.MapButton').each(function(index, child) {
-      var element = new MapButton($(this),
-                                  function(index){map.add(element);},
-                                  $(child).data('content'),
-                                  $(child).data('hold-content'));
+    this.element.children('div.MapCam').each(function(index, child) {
+      var element = new MapCam($(this),
+                                  function(index){map.add(element);});
     });
     
     this.element.children('div.MapDot').each(function(index, child) {
-      var element = new MapButton($(this),
-                                  function(index){map.add(element);},
-                                  $(child).data('content'),
-                                  $(child).data('hold-content'),
-                                  true);
+      var element = new MapDot($(this),
+                                  function(index){map.add(element);});
     });
 }
 Map.prototype.add = function(element){

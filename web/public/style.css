@@ -1,6 +1,12 @@
 html, body
 {
   height: 100%;
+  font-family: Georgia, serif;
+  font-size: 1em;
+  line-height:2em;
+}
+#startup{
+    position:fixed;
 }
 img{
     margin:0;
@@ -16,7 +22,7 @@ div {
 	-webkit-user-drag: none;
 }
 
-.hidden_content, .MapButton, .MapElement, .MapDot
+.hidden_content, .MapButton, .MapElement, .MapDot, .MapCam 
 {
 	display: none;
 }
@@ -25,17 +31,35 @@ div {
 {
 	display: block;
 }
+    
 #content_box
 {
 	width: 100%;
 	height: 50%;
-	border: 2px solid #000;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background: #fff;
+    background:#ddd;
 	z-index: 100;
-  overflow: auto;
+    position:relative;
+}
+#content_holder{
+    position:absolute;
+    overflow:auto;
+    height:90%;
+    width:90%;
+    background:#fff;
+    left:5%;
+    top:5%;
+}
+#content_text, #overlay{
+    position:absolute;
+}
+#content_text{
+    padding:2em;
+}
+#overlay{
+    background:#fff;
+    width:100%;
+    height:100%;
+    text-align:center;
 }
 /*
 #padding_box
@@ -66,7 +90,7 @@ div {
 	position: absolute;
 }
 
-.MapDot:hover
+.MapDot, .MapCam
 {
   cursor: pointer;
 }
